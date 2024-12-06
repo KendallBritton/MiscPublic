@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Entry</title>
+    <link rel="stylesheet" href="../WebpageStyles/welcomeScreen.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter your name to proceed:</h1>
+        <input type="text" id="nameInput" placeholder="Enter your name" onkeypress="handleKeyPress(event)">
+        <button onclick="checkName()">Submit</button>
+        <p id="message"></p>
+        <p id="countdown" style="display:none;"></p> <!-- Countdown placeholder -->
+    </div>
+
+    <script src="..//BackendScripts/welcomeScreenFunctionality.js"></script>
+</body>
+</html>
