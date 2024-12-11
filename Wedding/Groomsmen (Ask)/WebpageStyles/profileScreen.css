@@ -27,15 +27,19 @@ body {
     position: fixed;
     top: 0;
     left: -250px;
-    width: 150px;
+    width: 180px; /* Adjust width for consistency */
     height: 100%;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Soft blur effect */
     padding: 20px;
     transition: left 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+    border-radius: 0px; /* Rounded corners to match the toggle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .sidebar a {
@@ -46,11 +50,16 @@ body {
     display: block;
     width: 100%;
     text-align: left;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar a:hover {
-    background-color: #444;
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+    color: #ffb453; /* Highlight color for text */
 }
+
 
 
 /* Button to trigger sidebar */

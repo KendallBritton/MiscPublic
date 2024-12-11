@@ -4,7 +4,7 @@ const sidebarToggle = document.querySelector('.sidebar-toggle');
 // Function to toggle the sidebar
 function toggleSidebar() {
     if (sidebar.style.left === '0px') {
-        sidebar.style.left = '-200px'; // Hide sidebar
+        sidebar.style.left = '-230px'; // Hide sidebar
     } else {
         sidebar.style.left = '0px'; // Show sidebar
     }
@@ -13,14 +13,14 @@ function toggleSidebar() {
 
 // Event listener for mouse leave to close the sidebar
 sidebar.addEventListener('mouseleave', function() {
-    sidebar.style.left = '-200px'; // Hide sidebar when mouse leaves
+    sidebar.style.left = '-230px'; // Hide sidebar when mouse leaves
     sidebarToggle.style.display = 'block'; // Show the button again
 });
 
 // Event listener for clicks outside the sidebar
 document.addEventListener('click', function(event) {
     if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
-        sidebar.style.left = '-200px'; // Hide sidebar
+        sidebar.style.left = '-230px'; // Hide sidebar
         sidebarToggle.style.display = 'block'; // Show the button again
     }
 });
