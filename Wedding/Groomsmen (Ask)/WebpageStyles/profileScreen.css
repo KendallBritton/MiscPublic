@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #ffafbd, #ffc3a0, #ff677d, #d4a5a5);
+    background: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Warm earthy tones */
     background-size: 400% 400%;
     animation: gradientBackground 10s ease infinite;
 }
@@ -58,13 +58,25 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: #f39c12;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent black for contrast */
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Softer white/gray border */
+    border-radius: 8px; /* Smooth edges */
+    font-size: 1.2em;
     cursor: pointer;
     z-index: 11;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
+
+.sidebar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Highlight effect on hover */
+    color: black; /* Text becomes black for contrast */
+    border-color: rgba(200, 200, 200, 0.8); /* Softer gray tone on hover */
+    transform: scale(1.05); /* Slight growth effect on hover */
+}
+
 
 
 
