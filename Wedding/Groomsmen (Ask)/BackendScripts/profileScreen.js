@@ -1,9 +1,8 @@
+const sidebar = document.querySelector('.sidebar');
+const sidebarToggle = document.querySelector('.sidebar-toggle');
+
 // Function to toggle the sidebar
 function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
-    
-    // Toggle sidebar visibility
     if (sidebar.style.left === '0px') {
         sidebar.style.left = '-200px'; // Hide sidebar
     } else {
@@ -12,12 +11,14 @@ function toggleSidebar() {
     sidebarToggle.style.display = 'none'; // Hide the button when sidebar is open
 }
 
+// Event listener for mouse leave to close the sidebar
+sidebar.addEventListener('mouseleave', function() {
+    sidebar.style.left = '-200px'; // Hide sidebar when mouse leaves
+    sidebarToggle.style.display = 'block'; // Show the button again
+});
+
 // Event listener for clicks outside the sidebar
 document.addEventListener('click', function(event) {
-    const sidebar = document.querySelector('.sidebar');
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
-    
-    // Check if click is outside the sidebar and the toggle button
     if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
         sidebar.style.left = '-200px'; // Hide sidebar
         sidebarToggle.style.display = 'block'; // Show the button again
