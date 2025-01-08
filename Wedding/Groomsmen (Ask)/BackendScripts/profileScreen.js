@@ -64,3 +64,29 @@ document.getElementById("show-previous-page3").addEventListener("click", functio
     document.querySelector(".container4").style.display = "none"; // Show container3
 });
 
+// Function to handle the check box
+function handleCheckboxClick(selectedValue) {
+    const yesLabel = document.getElementById('yes-label');
+    const noLabel = document.getElementById('no-label');
+    const submitButton = document.getElementById('submit-button');
+    const yesCheckbox = document.querySelector('input[value="yes"]');
+    const noCheckbox = document.querySelector('input[value="no"]');
+
+    if (selectedValue === 'yes' && yesCheckbox.checked) {
+        noLabel.style.display = 'none'; // Hide "No" checkbox
+        submitButton.style.display = 'block'; // Show the Submit button
+    } else if (selectedValue === 'no' && noCheckbox.checked) {
+        yesLabel.style.display = 'none'; // Hide "Yes" checkbox
+        submitButton.style.display = 'block'; // Show the Submit button
+    } else {
+        // Re-enable both checkboxes if unselected
+        yesLabel.style.display = 'inline-block';
+        noLabel.style.display = 'inline-block';
+        submitButton.style.display = 'none'; // Hide the Submit button
+    }
+}
+
+// Function to handle the submit button
+function handleSubmit() {
+    alert('Form submitted!'); // Placeholder for form submission logic
+}

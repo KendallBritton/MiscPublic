@@ -211,3 +211,40 @@ body {
     margin: 0 10px;
     color: #999;
 }
+
+.checkbox-section {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.checkbox-section label {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.checkbox-section input {
+    margin-right: 5px;
+}
+
+#submit-button {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent black */
+    color: white;
+    padding: 7px 14px; /* Reduced padding by 30% */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Soft white/gray border */
+    border-radius: 8px; /* Rounded edges */
+    font-size: 0.84em; /* Reduced font size by 30% */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin-top: 10px; /* Adds a small space above the button */
+}
+
+#submit-button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Highlight effect */
+    color: black; /* Contrast text on hover */
+    border-color: rgba(200, 200, 200, 0.8); /* Softer gray border */
+    transform: scale(1.05); /* Slight growth effect */
+}

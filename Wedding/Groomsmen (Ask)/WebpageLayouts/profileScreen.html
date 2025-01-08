@@ -90,7 +90,18 @@
             <p>Welcome to your personalized page! Here you can find all the essential details about your account and explore the features available to you. 
                 This is where you can customize your preferences, view your activity, and get updates on new content. Dive in and start exploring!</p>
         </div>
-        
+
+        <div class="checkbox-section" id="checkbox-section">
+            <label id="yes-label">
+                <input type="checkbox" name="verdict" value="yes" onclick="handleCheckboxClick('yes')"> Yes
+            </label>
+            <label id="no-label">
+                <input type="checkbox" name="verdict" value="no" onclick="handleCheckboxClick('no')"> No
+            </label>
+        </div>
+    
+        <button id="submit-button" style="display: none;" onclick="handleSubmit()">Submit</button>
+            
         <div class="arrow-navigation">
             <a href="#" class="scroll-arrow" id="show-previous-page3">&#8592;</a> <!-- Left arrow -->
             <span class="circle">&#9675;</span> <!-- Open circle -->
