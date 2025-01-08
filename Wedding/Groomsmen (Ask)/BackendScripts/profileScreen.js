@@ -88,5 +88,16 @@ function handleCheckboxClick(selectedValue) {
 
 // Function to handle the submit button
 function handleSubmit() {
+
     alert('Form submitted!'); // Placeholder for form submission logic
 }
+
+// Initially hide the sidebar
+document.querySelector('.sidebar').classList.add('locked-sidebar');
+document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');
+
+// Enable sidebar on submit
+document.getElementById('submit-button').addEventListener('click', () => {
+    document.querySelector('.sidebar').classList.remove('locked-sidebar');
+    document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+});

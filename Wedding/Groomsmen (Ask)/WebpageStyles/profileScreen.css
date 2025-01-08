@@ -248,3 +248,8 @@ body {
     border-color: rgba(200, 200, 200, 0.8); /* Softer gray border */
     transform: scale(1.05); /* Slight growth effect */
 }
+
+.locked-sidebar {
+    pointer-events: none; /* Prevent interaction */
+    opacity: 0.5; /* Dim appearance to indicate disabled */
+}
