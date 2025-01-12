@@ -1,5 +1,6 @@
 const sidebar = document.querySelector('.sidebar');
 const sidebarToggle = document.querySelector('.sidebar-toggle');
+emailjs.init('kendallb85@gmail.com'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
 
 // Function to toggle the sidebar
 function toggleSidebar() {
@@ -67,21 +68,14 @@ document.getElementById("show-previous-page3").addEventListener("click", functio
 // Function to handle the check box
 function handleCheckboxClick(selectedValue) {
     const yesLabel = document.getElementById('yes-label');
-    const noLabel = document.getElementById('no-label');
     const submitButton = document.getElementById('submit-button');
     const yesCheckbox = document.querySelector('input[value="yes"]');
-    const noCheckbox = document.querySelector('input[value="no"]');
 
     if (selectedValue === 'yes' && yesCheckbox.checked) {
-        noLabel.style.display = 'none'; // Hide "No" checkbox
-        submitButton.style.display = 'block'; // Show the Submit button
-    } else if (selectedValue === 'no' && noCheckbox.checked) {
-        yesLabel.style.display = 'none'; // Hide "Yes" checkbox
         submitButton.style.display = 'block'; // Show the Submit button
     } else {
         // Re-enable both checkboxes if unselected
         yesLabel.style.display = 'inline-block';
-        noLabel.style.display = 'inline-block';
         submitButton.style.display = 'none'; // Hide the Submit button
     }
 }
@@ -98,6 +92,15 @@ document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');
 
 // Enable sidebar on submit
 document.getElementById('submit-button').addEventListener('click', () => {
-    document.querySelector('.sidebar').classList.remove('locked-sidebar');
-    document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+    emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
+        subject: 'Update From Your Groomsmen Web Service',
+        message: 'The user has completed their submission!',
+    })
+    .then(() => {
+        alert('Email sent successfully!');
+    })
+    .catch((error) => {
+        console.error('Email sending failed:', error);
+        alert('Failed to send email.');
+    });
 });
