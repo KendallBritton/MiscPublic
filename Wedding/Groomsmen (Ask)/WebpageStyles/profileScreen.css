@@ -40,6 +40,7 @@ body {
     border-right: 2px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
     border-radius: 0px; /* Rounded corners to match the toggle */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    z-index: 11;
 }
 
 .sidebar a {

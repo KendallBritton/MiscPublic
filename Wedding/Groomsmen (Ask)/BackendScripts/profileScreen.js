@@ -1,6 +1,25 @@
 const sidebar = document.querySelector('.sidebar');
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 
+checkSubmissionMap = localStorage.getItem("responseSubmissionMap");
+const obtainCurrentUser = localStorage.getItem("currentUserAccessName");
+
+// Restores state if user has previoulsy submitted response
+if (checkSubmissionMap != null && checkSubmissionMap.includes(obtainCurrentUser)){
+    if (document.getElementById("checkbox-section")) {
+        document.getElementById("checkbox-section").remove();
+    }
+    
+    if (document.getElementById("submit-button")) {
+        document.getElementById("submit-button").remove();
+    }
+    
+    // Enable the sidebar
+    document.querySelector('.sidebar').classList.remove('locked-sidebar');
+    document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+
+}
+
 // Function to toggle the sidebar
 function toggleSidebar() {
     if (sidebar.style.left === '0px') {
@@ -89,25 +108,75 @@ function handleSubmit() {
 document.querySelector('.sidebar').classList.add('locked-sidebar');
 document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');
 
-// Enable sidebar on submit
+// Response Submit Logic
 document.getElementById('submit-button').addEventListener('click', () => {
-    // Uncomment below for orginal intended functionality
-    alert('Email sent successfully!');
+
+    // Retrieve the existing map from localStorage
+    let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
+    let responseSubmissionMap = new Map(savedMapArray);
+
+    // Add the current user to the Map
+    responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
+
+    // Convert the updated Map to an array and save it to localStorage
+    localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
+
+    // Enable the sidebar
     document.querySelector('.sidebar').classList.remove('locked-sidebar');
     document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
 
+    // Remove the checkboxes and submit button
+    document.getElementById("checkbox-section").remove();
+    document.getElementById("submit-button").remove();
+
+    // Uncomment Below for full functionality
 
     // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
     //     subject: 'Update From Your Groomsmen Web Service',
-    //     message: 'The user has completed their submission!',
+    //     message: userName + ' has chosen to be a groomsmen!',
     // })
-    // .then(() => {
-    //     alert('Email sent successfully!');
-    //     document.querySelector('.sidebar').classList.remove('locked-sidebar');
-    //     document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+    // .then(response => {
+    //     console.log("Email sent successfully!", response);
+
+    // // Retrieve the existing map from localStorage
+    // let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
+    // let responseSubmissionMap = new Map(savedMapArray);
+
+    // // Add the current user to the Map
+    // responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
+
+    // // Convert the updated Map to an array and save it to localStorage
+    // localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
+
+    // // Unlocks the menu bar
+    // document.querySelector('.sidebar').classList.remove('locked-sidebar');
+    // document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+
+    //     // Remove the checkboxes and submit button
+    //     document.getElementById("checkboxContainer").remove();
+    //     document.getElementById("submitButton").remove();
+
     // })
-    // .catch((error) => {
-    //     console.error('Email sending failed:', error);
-    //     alert('Failed to send email.');
+    // .catch(error => {
+    //     console.error("Failed to send email:", error);
+
+    //     // Show an error message (optional)
+    //     alert("There was an error submitting your response. Please try again.");
     // });
+});
+
+// On page load, check if the user has already submitted
+window.addEventListener("load", function () {
+    const userName = localStorage.getItem("userName");
+    if (userName && localStorage.getItem(`${userName}_submitted`) === "true") {
+        // Remove checkboxes and button if already submitted
+        const checkboxContainer = document.getElementById("checkboxContainer");
+        if (checkboxContainer) checkboxContainer.remove();
+
+        // Optional: Show a message that the form has already been submitted
+        const confirmationMessage = document.createElement("p");
+        confirmationMessage.textContent = `Welcome back, ${userName}. You have already submitted your response.`;
+        confirmationMessage.style.color = "gray";
+        document.querySelector(".summary").appendChild(confirmationMessage);
+    }
 });

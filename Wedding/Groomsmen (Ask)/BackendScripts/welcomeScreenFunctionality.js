@@ -109,6 +109,11 @@ function checkName() {
         
         message.innerHTML = `<strong style='color: green;'>Access Granted</strong><br><br><span style='color: black;'>Welcome ${firstName}!</span>`;
 
+        // Save the name to localStorage when submitted on the welcome page
+        const userName = firstName;
+        if (userName) {
+            localStorage.setItem("currentUserAccessName", userName);
+        }
         
         // Start the countdown
         startCountdown(10); // 10 seconds countdown
