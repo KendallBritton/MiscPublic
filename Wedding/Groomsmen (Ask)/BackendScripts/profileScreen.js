@@ -1,6 +1,5 @@
 const sidebar = document.querySelector('.sidebar');
 const sidebarToggle = document.querySelector('.sidebar-toggle');
-emailjs.init('kendallb85@gmail.com'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
 
 // Function to toggle the sidebar
 function toggleSidebar() {
@@ -92,15 +91,23 @@ document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');
 
 // Enable sidebar on submit
 document.getElementById('submit-button').addEventListener('click', () => {
-    emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
-        subject: 'Update From Your Groomsmen Web Service',
-        message: 'The user has completed their submission!',
-    })
-    .then(() => {
-        alert('Email sent successfully!');
-    })
-    .catch((error) => {
-        console.error('Email sending failed:', error);
-        alert('Failed to send email.');
-    });
+    // Uncomment below for orginal intended functionality
+    alert('Email sent successfully!');
+    document.querySelector('.sidebar').classList.remove('locked-sidebar');
+    document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+
+
+    // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
+    //     subject: 'Update From Your Groomsmen Web Service',
+    //     message: 'The user has completed their submission!',
+    // })
+    // .then(() => {
+    //     alert('Email sent successfully!');
+    //     document.querySelector('.sidebar').classList.remove('locked-sidebar');
+    //     document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+    // })
+    // .catch((error) => {
+    //     console.error('Email sending failed:', error);
+    //     alert('Failed to send email.');
+    // });
 });
