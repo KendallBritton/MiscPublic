@@ -4,6 +4,10 @@ const sidebarToggle = document.querySelector('.sidebar-toggle');
 checkSubmissionMap = localStorage.getItem("responseSubmissionMap");
 const obtainCurrentUser = localStorage.getItem("currentUserAccessName");
 
+// Initially hide the sidebar
+document.querySelector('.sidebar').classList.add('locked-sidebar');
+document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');
+
 // Restores state if user has previoulsy submitted response
 if (checkSubmissionMap != null && checkSubmissionMap.includes(obtainCurrentUser)){
     if (document.getElementById("checkbox-section")) {
@@ -104,10 +108,6 @@ function handleSubmit() {
     alert('Form submitted!'); // Placeholder for form submission logic
 }
 
-// Initially hide the sidebar
-document.querySelector('.sidebar').classList.add('locked-sidebar');
-document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');
-
 // Response Submit Logic
 document.getElementById('submit-button').addEventListener('click', () => {
 
@@ -163,20 +163,4 @@ document.getElementById('submit-button').addEventListener('click', () => {
     //     // Show an error message (optional)
     //     alert("There was an error submitting your response. Please try again.");
     // });
-});
-
-// On page load, check if the user has already submitted
-window.addEventListener("load", function () {
-    const userName = localStorage.getItem("userName");
-    if (userName && localStorage.getItem(`${userName}_submitted`) === "true") {
-        // Remove checkboxes and button if already submitted
-        const checkboxContainer = document.getElementById("checkboxContainer");
-        if (checkboxContainer) checkboxContainer.remove();
-
-        // Optional: Show a message that the form has already been submitted
-        const confirmationMessage = document.createElement("p");
-        confirmationMessage.textContent = `Welcome back, ${userName}. You have already submitted your response.`;
-        confirmationMessage.style.color = "gray";
-        document.querySelector(".summary").appendChild(confirmationMessage);
-    }
 });
