@@ -12,22 +12,6 @@ body {
     animation: gradientBackground 10s ease infinite;
 }
 
-/* Main container to hold both the list and summary */
-.main-container {
-    display: flex;
-    flex-direction: column; /* Stack the list and summary vertically */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 90%; /* 90% of the screen width */
-    max-width: 800px; /* Optional: Limit the max width for a neat appearance */
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slight background for visibility */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 @keyframes gradientBackground {
     0% {
         background-position: 0% 50%;
@@ -113,7 +97,7 @@ body {
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: white;
+    background: #FFDAB9;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -130,7 +114,7 @@ body {
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: white;
+    background: #FFE4C4;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -147,7 +131,7 @@ body {
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: white;
+    background: #FFDAB9;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -175,24 +159,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-/* Image Container Styling */
-.image-container {
-    position: absolute; /* Absolute positioning within the container */
-    top: 0; /* Align to the top of the container */
-    left: 0; /* Align to the left of the container */
-    z-index: 2;
-    width: 250px; /* Adjust the image size */
-    height: auto;
-}
-
-/* Image Styling */
-#welcomeImage {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
 
 /* Short summary styling */
 .summary {
