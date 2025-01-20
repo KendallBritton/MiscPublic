@@ -319,12 +319,6 @@ body {
     transform: translateX(10px); /* Slight shift effect on hover */
 }
 
-/* Hover effect on the bullet */
-.qualifications-list li:hover::before {
-    color: #f39c12; /* Change bullet color */
-}
-
-
 /* Alternating positions for a staggered look */
 .qualifications-list li:nth-child(odd) {
     transform: translateX(-30px); /* Start from the left */
@@ -344,4 +338,28 @@ body {
 
 .qualifications-list li:nth-child(even):hover {
     transform: translateX(-15px); /* Shift further to the left */
+}
+
+.parallax-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.parallax-item {
+    position: relative;
+    padding: 100px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    animation: parallaxEffect 35s infinite alternate;
+}
+@keyframes parallaxEffect {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
