@@ -91,17 +91,18 @@ body {
 
 
 
-/* Main content container */
 .container {
     position: relative;
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: #FFDAB9;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
     padding: 40px;
-    border-radius: 8px;
-    border: 2px solid rgba(38, 18, 6, 0.4);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* More pronounced rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    backdrop-filter: blur(20px); /* Glass effect with blur */
+    -webkit-backdrop-filter: blur(20px); /* For Safari support */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Depth effect */
     text-align: center;
     z-index: 1; /* Ensure the container stays behind the image */
     display: flex;
@@ -115,11 +116,13 @@ body {
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: #FFDAB9;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
     padding: 40px;
-    border-radius: 8px;
-    border: 2px solid rgba(38, 18, 6, 0.4);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* More pronounced rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    backdrop-filter: blur(20px); /* Glass effect with blur */
+    -webkit-backdrop-filter: blur(20px); /* For Safari support */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Depth effect */
     text-align: center;
     z-index: 2; /* Ensure the container stays behind the image */
     display: none;
@@ -129,17 +132,18 @@ body {
 }
 
 .container3 {
-    position: absolute;
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: #FFDAB9;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
     padding: 40px;
-    border-radius: 8px;
-    border: 2px solid rgba(38, 18, 6, 0.4);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* More pronounced rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    backdrop-filter: blur(20px); /* Glass effect with blur */
+    -webkit-backdrop-filter: blur(20px); /* For Safari support */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Depth effect */
     text-align: center;
-    z-index: 2; /* Ensure the container stays behind the image */
+    z-index: 3; /* Ensure the container stays behind the image */
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -147,17 +151,18 @@ body {
 }
 
 .container4 {
-    position: absolute;
     width: 90%; /* Make the container take up 90% of the screen width */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
-    background: #FFDAB9;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
     padding: 40px;
-    border-radius: 8px;
-    border: 2px solid rgba(38, 18, 6, 0.4);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* More pronounced rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    backdrop-filter: blur(20px); /* Glass effect with blur */
+    -webkit-backdrop-filter: blur(20px); /* For Safari support */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Depth effect */
     text-align: center;
-    z-index: 2; /* Ensure the container stays behind the image */
+    z-index: 4; /* Ensure the container stays behind the image */
     display: none;
     flex-direction: column;
     justify-content: center;
