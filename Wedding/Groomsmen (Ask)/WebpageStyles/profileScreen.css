@@ -130,13 +130,13 @@ body {
         filter: blur(10px) opacity(0.3);
     }
     25% {
-        filter: blur(px) opacity(0.8);
+        filter: blur(1px) opacity(0.8);
     }
     50% {
-        filter: blur(2px) opacity(0.9);
+        filter: blur(0px) opacity(0.9);
     }
     75% {
-        filter: blur(5px) opacity(0.6);
+        filter: blur(7px) opacity(0.6);
     }
     100% {
         filter: blur(10px) opacity(0.3);
@@ -151,7 +151,7 @@ body {
     filter: blur(10px); /* Initial blur effect */
     opacity: 0.3; /* Initial opacity */
     border-radius: 16px;
-    animation: randomBlurOpacity 5s infinite ease-in-out; /* Add random animation */
+    animation: randomBlurOpacity 10s infinite ease-in-out; /* Add random animation */
 }
 
 .container2 {
