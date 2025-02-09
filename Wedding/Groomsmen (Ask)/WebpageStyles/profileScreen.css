@@ -216,7 +216,7 @@ body {
 .summary {
     margin-top: 20px;
     font-size: 1.2em;
-    color: #555;
+    color: #1B1B1B;
     line-height: 1.6;
     text-align: left;
     max-width: 700px;
@@ -226,7 +226,7 @@ body {
 .container .summary {
     margin-top: 20px;
     font-size: 1.2em;
-    color: #363636;
+    color: #1B1B1B;
     line-height: 1.6;
     text-align: center;
     max-width: 700px;
@@ -241,7 +241,7 @@ body {
 
 .container h1 {
     margin-top: 20px;
-    color: #363636;
+    color: #1B1B1B;
     line-height: 1.6;
     text-align: center;
     max-width: 700px;
@@ -277,7 +277,7 @@ body {
     font-size: 2em;
     margin: 0 20px;
     cursor: pointer;
-    color: #333;
+    color: #1B1B1B;
     text-decoration: none;
 }
 
@@ -288,7 +288,7 @@ body {
 .circle {
     font-size: 1.5em;
     margin: 0 10px;
-    color: #999;
+    color: #1B1B1B;
 }
 
 .checkbox-section {
@@ -340,7 +340,7 @@ body {
     padding-left: 0;
     text-align: left;
     font-size: 1.1em;
-    color: #555;
+    color: #1B1B1B;
     line-height: 1.6;
     position: relative;
     display: flex; /* Use flex to split items into two columns */
