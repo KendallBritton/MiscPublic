@@ -255,42 +255,41 @@ body {
     background-size: 400% 400%;
 }
 
-.container3 .summary {
+.container3 .summary-and-qualifications {
     margin-top: 20px;
-    font-size: 1.2em;
-    color: #1B1B1B;
-    line-height: 1.6;
-    text-align: center;
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
     background-size: 400% 400%;
+    text-align: center;
+    color: #1B1B1B;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container3 .qualifications-list {
+.container3 .summary-and-qualifications .summary {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    background: none; /* Remove individual background */
+    border: none; /* Remove individual border */
+    animation: none; /* Remove individual animation */
+}
+
+.container3 .summary-and-qualifications .qualifications-list {
     margin-top: 20px;
-    padding-top: 10px;
-    list-style-type: none; /* Remove default bullets */
-    padding-left: 0;
-    text-align: left;
-    font-size: 1.1em;
-    color: #1B1B1B;
-    line-height: 1.6;
-    position: relative;
-    display: flex; /* Use flex to split items into two columns */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 80%; /* Adjust width to fit within the centered container */
-    max-width: 800px; /* Optional: Limit the max width for a neat appearance */
-    background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-    animation: gradientBackground 10s ease infinite;
-    background-size: 400% 400%;
+    padding: 0;
+    width: 100%; /* Ensure it fits within the parent container */
+    background: none; /* Remove individual background */
+    border: none; /* Remove individual border */
+    animation: none; /* Remove individual animation */
 }
 
 
@@ -572,14 +571,28 @@ body {
     padding: 100px;
     background-color: #f0f0f0;
     margin-bottom: 20px;
-    animation: parallaxEffect 35s infinite alternate;
+    animation: parallaxEffect 40s infinite;
 }
+
+/* Adjust the keyframes to calculate the total height dynamically */
 @keyframes parallaxEffect {
     0% {
         transform: translateY(0);
     }
+    10% {
+        transform: translateY(calc((-311.81px) * 1)); /* Move down one event space */
+    }
+    20% {
+        transform: translateY(calc((-311.81px) * 2)); /* Move down one event space */
+    }
+    30% {
+        transform: translateY(calc((-311.81px) * 3)); /* Move down one event space */
+    }
+    40% {
+        transform: translateY(calc((-311.81px) * 4)); /* Move down one event space */
+    }
     50% {
-        transform: translateY(-1150px);
+        transform: translateY(calc((-311.81px) * 5)); /* Move down one event space */
     }
     100% {
         transform: translateY(0);
