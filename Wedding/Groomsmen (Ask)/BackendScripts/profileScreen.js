@@ -164,3 +164,35 @@ document.getElementById('submit-button').addEventListener('click', () => {
     //     alert("There was an error submitting your response. Please try again.");
     // });
 });
+
+// Calculate the height of the parallax item and set it as a CSS variable
+document.addEventListener("DOMContentLoaded", () => {
+    const parallaxItem = document.querySelector(".parallax-item");
+    const parallaxContainer = document.querySelector(".parallax-container");
+
+    document.querySelector(".container2").style.display = "flex"; 
+
+    if (parallaxItem && parallaxContainer) {
+        // Get the height of a single parallax-item
+        const itemHeight = parallaxItem.offsetHeight;
+
+        // Set the height as a CSS variable on the parallax-container
+        parallaxContainer.style.setProperty("--parallax-item-height", `${itemHeight}px`);
+
+        // Calculate the distance between the parallax container and the top of the first parallax-item
+        const containerRect = parallaxContainer.getBoundingClientRect();
+        const itemRect = parallaxItem.getBoundingClientRect();
+        const distanceFromTop = itemRect.top - containerRect.top;
+        const distanceFromBottom = containerRect.top - itemRect.bottom;
+
+        console.log("Distance from parallax container to first parallax item:", distanceFromTop);
+        console.log("Distance from parallax container to bottom of first parallax item:", distanceFromBottom);
+
+        // Optionally, set this distance as a CSS variable
+        parallaxContainer.style.setProperty("--parallax-item-offset", `${distanceFromTop}px`);
+    } else {
+        console.error("Parallax item or container not found.");
+    }
+
+    document.querySelector(".container2").style.display = "none"; 
+});

@@ -565,36 +565,35 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    --parallax-item-offset: 0px; /* Default value */
 }
 .parallax-item {
     position: relative;
     padding: 100px;
     background-color: #f0f0f0;
+    margin-top: var(--parallax-item-offset); /* Adjust margin based on offset */
     margin-bottom: 20px;
-    animation: parallaxEffect 40s infinite;
+    animation: parallaxEffect 60s infinite;
 }
 
 /* Adjust the keyframes to calculate the total height dynamically */
 @keyframes parallaxEffect {
-    0% {
+    0%, 5%{
         transform: translateY(0);
     }
-    10% {
-        transform: translateY(calc((-311.81px) * 1)); /* Move down one event space */
+    16%, 21% {
+        transform: translateY(calc((var(--parallax-item-height) + 10px) * -1)); /* Move down one event space */
     }
-    20% {
-        transform: translateY(calc((-311.81px) * 2)); /* Move down one event space */
+    37%, 42% {
+        transform: translateY(calc((var(--parallax-item-height) + 15px) * -2)); /* Move down one event space */
     }
-    30% {
-        transform: translateY(calc((-311.81px) * 3)); /* Move down one event space */
+    58%, 63% {
+        transform: translateY(calc((var(--parallax-item-height) + 15px) * -3)); /* Move down one event space */
     }
-    40% {
-        transform: translateY(calc((-311.81px) * 4)); /* Move down one event space */
-    }
-    50% {
-        transform: translateY(calc((-311.81px) * 5)); /* Move down one event space */
+    79%, 84% {
+        transform: translateY(calc((var(--parallax-item-height) + 15px) * -4)); /* Move down one event space */
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0); /* Return to the original position */
     }
 }
