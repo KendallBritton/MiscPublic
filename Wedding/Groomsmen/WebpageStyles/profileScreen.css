@@ -7,9 +7,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     background: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Warm earthy tones */
     background-size: 400% 400%;
     animation: gradientBackground 10s ease infinite;
+    overflow-x: hidden;
 }
 
 @keyframes gradientBackground {
@@ -22,6 +24,14 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -595,5 +605,19 @@ body {
     }
     100% {
         transform: translateY(0); /* Return to the original position */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on smaller screens */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .photo-collage img {
+        width: 100%; /* Make images responsive */
     }
 }
