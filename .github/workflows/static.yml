@@ -36,8 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-        # Specify the directory containing the files to deploy
-        path: 'Wedding/Groomsmen/'
+          # Specify the directory containing the files to deploy
+          path: 'Wedding/Groomsmen/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
