@@ -10,6 +10,12 @@ gridContainer.style.zIndex = '-1'; // Place behind all content
 gridContainer.style.gap = '0'; // Remove spacing between grid cells
 gridContainer.style.transition = 'grid-template-columns 0.2s, grid-template-rows 0.2s'; // Smooth transition for grid resizing
 
+// Add safe area insets for iPhones
+gridContainer.style.paddingTop = 'env(safe-area-inset-top)';
+gridContainer.style.paddingBottom = 'env(safe-area-inset-bottom)';
+gridContainer.style.paddingLeft = 'env(safe-area-inset-left)';
+gridContainer.style.paddingRight = 'env(safe-area-inset-right)';
+
 document.body.appendChild(gridContainer);
 
 // Function to populate the grid with blocks
