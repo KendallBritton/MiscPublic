@@ -139,7 +139,7 @@ function startCountdown(seconds) {
         if (seconds <= 0) {
             clearInterval(countdownTimer);
             countdown.style.display = "none"; // Hide countdown when done
-            window.location.href = "../WebpageLayouts/profileScreen.html"; // Redirect to another webpage
+            window.location.href = "./WebpageLayouts/profileScreen.html"; // Redirect to another webpage
         }
         seconds--;
     }, 1000);
