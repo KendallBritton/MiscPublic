@@ -10,8 +10,6 @@ gridContainer.style.zIndex = '-1'; // Place behind all content
 gridContainer.style.gap = '0'; // Remove spacing between grid cells
 gridContainer.style.transition = 'grid-template-columns 0.2s, grid-template-rows 0.2s'; // Smooth transition for grid resizing
 
-gridContainer.style.overflow = 'auto';
-
 document.body.appendChild(gridContainer);
 
 // Function to populate the grid with blocks
