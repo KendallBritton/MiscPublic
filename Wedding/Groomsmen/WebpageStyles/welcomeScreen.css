@@ -82,7 +82,7 @@ button:active {
 
 /* Styling the top safe area */
 .safe-area-top {
-    background-color: #45a049; /* Replace #yourColor with your desired color */
+    background-color: #000000; /* Replace #yourColor with your desired color */
     height: env(safe-area-inset-top);
     width: 100%;
     position: fixed;
