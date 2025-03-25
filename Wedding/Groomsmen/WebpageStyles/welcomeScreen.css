@@ -7,7 +7,6 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
-    overflow: hidden; /* Disable scrolling */
 }
 
 /* Centering the container */
