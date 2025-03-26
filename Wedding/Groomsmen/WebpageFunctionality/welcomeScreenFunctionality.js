@@ -26,6 +26,9 @@ function createGrid() {
     const blocks = gridContainer.children;
     const columnColors = Array.from({ length: cols }, getRandomColor);
 
+    // Set the background color of the body to the average color of all columns
+    document.body.style.backgroundColor = calculateAverageColor(columnColors);
+
     let blockIndex = 0;
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
@@ -71,6 +74,23 @@ function updateColors() {
         const col = index % cols; // Determine column based on index
         block.style.backgroundColor = columnColors[col];
     });
+}
+
+function calculateAverageColor(colors) {
+    let totalR = 0, totalG = 0, totalB = 0;
+
+    colors.forEach(color => {
+        const rgb = color.match(/\d+/g); // Extract RGB values from the color string
+        totalR += parseInt(rgb[0]);
+        totalG += parseInt(rgb[1]);
+        totalB += parseInt(rgb[2]);
+    });
+
+    const avgR = Math.floor(totalR / colors.length);
+    const avgG = Math.floor(totalG / colors.length);
+    const avgB = Math.floor(totalB / colors.length);
+
+    return `rgb(${avgR}, ${avgG}, ${avgB})`;
 }
 
 // To handle smooth resizing and prevent glitches
