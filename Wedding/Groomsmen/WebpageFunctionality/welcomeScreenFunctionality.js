@@ -74,6 +74,9 @@ function updateColors() {
         const col = index % cols; // Determine column based on index
         block.style.backgroundColor = columnColors[col];
     });
+
+    // Update the body background color to the average of the column colors
+    document.body.style.backgroundColor = calculateAverageColor(columnColors);
 }
 
 function calculateAverageColor(colors) {
