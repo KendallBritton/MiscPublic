@@ -137,6 +137,8 @@ function checkName() {
         if (userName) {
             localStorage.setItem("currentUserAccessName", userName);
         }
+
+        sessionStorage.setItem("accessGranted", "true"); // Set a flag in sessionStorage to indicate valid access
         
         // Start the countdown
         startCountdown(10); // 10 seconds countdown
@@ -166,12 +168,4 @@ function startCountdown(seconds) {
         }
         seconds--;
     }, 1000);
-}
-
-function redirectToProfile() {
-    // Set a flag in sessionStorage to indicate valid access
-    sessionStorage.setItem("accessGranted", "true");
-
-    // Redirect to profileScreen.html
-    window.location.href = "./WebpageLayouts/profileScreen.html";
 }
