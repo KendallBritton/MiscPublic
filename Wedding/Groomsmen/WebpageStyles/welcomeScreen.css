@@ -6,7 +6,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;  
-    overflow: hidden; /* Prevents scrollbars */
 }
 
 
@@ -79,4 +78,18 @@ button:active {
     margin-top: 15px;
     font-weight: bold;
     color: #333;
+}
+
+/* Hide overflow when the device is in portrait mode */
+@media (orientation: portrait) {
+    html, body {
+        overflow: hidden; /* Prevent scrolling in portrait mode */
+    }
+}
+
+/* Allow scrolling in landscape mode */
+@media (orientation: landscape) {
+    html, body {
+        overflow: auto; /* Enable scrolling in landscape mode if needed */
+    }
 }
