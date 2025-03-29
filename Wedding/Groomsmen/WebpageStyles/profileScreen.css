@@ -12,6 +12,12 @@ body {
     animation: gradientBackground 10s ease infinite;
 }
 
+html {
+    background: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Warm earthy tones */
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+}
+
 @keyframes gradientBackground {
     0% {
         background-position: 0% 50%;
