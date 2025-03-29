@@ -168,3 +168,32 @@ function startCountdown(seconds) {
         seconds--;
     }, 1000);
 }
+
+// Function to check orientation and toggle fullscreen
+function handleOrientationChange() {
+    if (window.innerWidth > window.innerHeight) {
+        // Landscape mode: Request fullscreen
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.webkitRequestFullscreen) { // For Safari
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) { // For IE/Edge
+            document.documentElement.msRequestFullscreen();
+        }
+    } else {
+        // Portrait mode: Exit fullscreen
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { // For Safari
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // For IE/Edge
+            document.msExitFullscreen();
+        }
+    }
+}
+
+// Listen for orientation changes
+window.addEventListener("resize", handleOrientationChange);
+
+// Call the function initially to handle the current orientation
+handleOrientationChange();
