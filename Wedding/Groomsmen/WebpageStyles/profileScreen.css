@@ -95,7 +95,7 @@ body {
     position: relative;
     width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
-    height: 80vh; /* Set the height to 80% of the viewport height */
+    height: calc(100% - 250px); /* Dynamically adjust width to fit within the screen */
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
     padding: 40px;
     border-radius: 16px; /* More pronounced rounded edges */
