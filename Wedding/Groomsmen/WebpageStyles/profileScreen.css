@@ -92,7 +92,7 @@ body {
 
 
 .container {
-    position: relative;
+    position: absolute;
     width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: calc(100% - 275px); /* Dynamically adjust width to fit within the screen */
