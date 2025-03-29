@@ -4,13 +4,6 @@ const sidebarToggle = document.querySelector('.sidebar-toggle');
 checkSubmissionMap = localStorage.getItem("responseSubmissionMap");
 const obtainCurrentUser = localStorage.getItem("currentUserAccessName");
 
-// Setting background color for the page
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.background = "linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460)";
-    document.body.style.backgroundSize = "400% 400%"; // For animated gradients
-    document.body.style.animation = "gradientBackground 10s ease infinite"; // Optional animation
-});
-
 // Initially hide the sidebar
 document.querySelector('.sidebar').classList.add('locked-sidebar');
 document.querySelector('.sidebar-toggle').classList.add('locked-sidebar');

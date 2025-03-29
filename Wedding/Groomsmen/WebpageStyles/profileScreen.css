@@ -7,9 +7,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Warm earthy tones */
+    background: #000000; /* Warm earthy tones */
     background-size: 400% 400%;
     animation: gradientBackground 10s ease infinite;
+    z-index: 1000;
 }
 
 @keyframes gradientBackground {
