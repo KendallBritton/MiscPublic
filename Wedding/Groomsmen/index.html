@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Enter your name to proceed:</h1>
         <input type="text" id="nameInput" placeholder="Enter your name" onkeypress="handleKeyPress(event)">
-        <button onclick="checkName()">Submit</button>
+        <button onclick="checkName(); redirectToProfile()">Submit</button>
         <p id="message"></p>
         <p id="countdown" style="display:none;"></p> <!-- Countdown placeholder -->
     </div>

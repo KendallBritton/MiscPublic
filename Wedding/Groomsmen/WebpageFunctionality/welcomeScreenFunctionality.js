@@ -167,3 +167,11 @@ function startCountdown(seconds) {
         seconds--;
     }, 1000);
 }
+
+function redirectToProfile() {
+    // Set a flag in sessionStorage to indicate valid access
+    sessionStorage.setItem("accessGranted", "true");
+
+    // Redirect to profileScreen.html
+    window.location.href = "./WebpageLayouts/profileScreen.html";
+}
