@@ -176,6 +176,7 @@ body {
 }
 
 .container3 {
+    position: absolute;
     width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
@@ -195,6 +196,7 @@ body {
 }
 
 .container4 {
+    position: absolute;
     width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
