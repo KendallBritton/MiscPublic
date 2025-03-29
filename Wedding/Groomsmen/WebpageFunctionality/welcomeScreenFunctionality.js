@@ -9,7 +9,6 @@ gridContainer.style.display = 'grid';
 gridContainer.style.zIndex = '-1'; // Place behind all content
 gridContainer.style.gap = '0'; // Remove spacing between grid cells
 gridContainer.style.transition = 'grid-template-columns 0.2s, grid-template-rows 0.2s'; // Smooth transition for grid resizing
-gridContainer.style.overflow = 'hidden'; // Hide overflowing blocks
 
 document.body.appendChild(gridContainer);
 
@@ -168,16 +167,3 @@ function startCountdown(seconds) {
         seconds--;
     }, 1000);
 }
-
-function enableFullscreen() {
-    if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // For Safari
-        document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { // For IE/Edge
-        document.documentElement.msRequestFullscreen();
-    }
-}
-
-// Call fullscreen mode when the user interacts with the page
-document.addEventListener("click", enableFullscreen);
