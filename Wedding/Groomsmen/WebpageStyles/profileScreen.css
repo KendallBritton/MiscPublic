@@ -93,7 +93,7 @@ body {
 
 .container {
     position: relative;
-    width: 90%; /* Make the container take up 90% of the screen width */
+    width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
@@ -156,7 +156,7 @@ body {
 
 .container2 {
     position: absolute;
-    width: 90%; /* Make the container take up 90% of the screen width */
+    width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
@@ -175,7 +175,7 @@ body {
 }
 
 .container3 {
-    width: 90%; /* Make the container take up 90% of the screen width */
+    width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
@@ -194,7 +194,7 @@ body {
 }
 
 .container4 {
-    width: 90%; /* Make the container take up 90% of the screen width */
+    width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
     max-width: 1200px; /* Increase the max-width for larger screens */
     height: 80vh; /* Set the height to 80% of the viewport height */
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
@@ -595,5 +595,19 @@ body {
     }
     100% {
         transform: translateY(0); /* Return to the original position */
+    }
+}
+
+/* Hide overflow when the device is in portrait mode */
+@media (orientation: portrait) {
+    html, body {
+        overflow: hidden; /* Prevent scrolling in portrait mode */
+    }
+}
+
+/* Allow scrolling in landscape mode */
+@media (orientation: landscape) {
+    html, body {
+        overflow: auto; /* Enable scrolling in landscape mode if needed */
     }
 }
