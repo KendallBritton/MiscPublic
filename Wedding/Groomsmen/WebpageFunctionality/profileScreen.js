@@ -196,3 +196,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".container2").style.display = "none"; 
 });
+
+function updateBackgroundColor() {
+    document.body.style.backgroundColor = "linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460)"; // Warm earthy tones
+    document.body.style.backgroundSize = "400% 400%"; // Set a larger background size for smooth animation
+    document.body.style.animation = "gradientBackground 10s ease infinite"; // Apply the animation
+}
+
+updateBackgroundColor(); // Call the function to set the background color
