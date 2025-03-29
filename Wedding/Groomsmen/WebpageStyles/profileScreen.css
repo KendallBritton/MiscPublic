@@ -599,7 +599,6 @@ body {
     }
 }
 
-/* Hide overflow when the device is in portrait mode */
 @media (orientation: portrait) {
     html, body {
         overflow: auto; /* Prevent scrolling in portrait mode */
