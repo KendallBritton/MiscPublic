@@ -6,11 +6,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;  
+    overflow: hidden; /* Prevents scrollbars */
 }
 
-html {
-    overflow-y: hidden; /* Prevent vertical scroll bar */
-}
 
 /* Centering the container */
 .container {
