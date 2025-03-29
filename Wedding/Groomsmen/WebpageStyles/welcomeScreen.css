@@ -15,15 +15,13 @@ body {
     padding: 30px 40px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: calc(400px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    width: calc(100% - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    max-width: 400px;
+    width: calc(100% - 20px); /* Dynamically adjust width to fit within the screen */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     gap: 15px; /* Adds consistent spacing between elements */
-    margin-left: env(safe-area-inset-top);
-    margin-right: env(safe-area-inset-bottom);
 }
 
 /* Heading styles */
