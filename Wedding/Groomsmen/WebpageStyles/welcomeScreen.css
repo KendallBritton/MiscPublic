@@ -16,7 +16,7 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
-    width: calc(100% - 50px); /* Dynamically adjust width to fit within the screen */
+    width: calc(100% - 150px); /* Dynamically adjust width to fit within the screen */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
