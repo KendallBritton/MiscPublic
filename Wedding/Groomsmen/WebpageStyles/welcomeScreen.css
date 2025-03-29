@@ -6,7 +6,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow-y: hidden; /* Prevent vertical scroll */
 }
 
 /* Centering the container */
@@ -23,6 +22,7 @@ body {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     gap: 15px; /* Adds consistent spacing between elements */
+    overflow-y: hidden; /* Prevent vertical scroll */
 }
 
 /* Heading styles */
