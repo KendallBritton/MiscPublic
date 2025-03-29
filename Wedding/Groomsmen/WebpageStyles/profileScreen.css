@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Warm earthy tones */ ;
+    background-color: #a0522d; /* Warm earthy tones */
     background: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Warm earthy tones */
     background-size: 400% 400%;
     animation: gradientBackground 10s ease infinite;
