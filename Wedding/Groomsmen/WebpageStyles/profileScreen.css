@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000; /* Warm earthy tones */
+    background-color: rgb(100, 100, 100);
 }
 
 .background-layer {
