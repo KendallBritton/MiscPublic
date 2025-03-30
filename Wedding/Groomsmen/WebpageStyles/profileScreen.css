@@ -7,19 +7,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #deb887; /* Initial color */
+    background-color: #dbb382; /* Initial color */
     animation: backgroundColorTransition 10s ease infinite; /* Animate background-color */
 }
 
 @keyframes backgroundColorTransition {
     0% {
-        background-color: #deb887;
+        background-color: #dbb382;
     }
     50% {
-        background-color: #a0522d;
+        background-color: #924c19;
     }
     100% {
-        background-color: #deb887;
+        background-color: #dbb382;
     }
 }
 
