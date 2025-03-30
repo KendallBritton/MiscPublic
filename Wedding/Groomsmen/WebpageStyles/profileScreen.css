@@ -258,7 +258,7 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 10px;
-    background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -274,7 +274,7 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 10px;
-    background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -284,7 +284,7 @@ body {
 .container3 .summary-and-qualifications {
     margin-top: 20px;
     padding: 20px;
-    background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -330,7 +330,7 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 10px;
-    background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -360,7 +360,7 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 10px;
-    background: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -390,7 +390,7 @@ body {
     max-width: 700px;
     margin: 20px auto;
     padding: 10px;
-    background: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -414,7 +414,7 @@ body {
     line-height: 1.6;
     max-width: 700px;
     margin: 20px auto;
-    background: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -438,7 +438,7 @@ body {
     line-height: 1.6;
     max-width: 700px;
     margin: 20px auto;
-    background: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(45deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
@@ -477,7 +477,7 @@ body {
     color: #333;
     margin: 20px auto;
     padding: 10px;
-    background: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
+    background-image: linear-gradient(225deg, rgba(160, 82, 45, 0.8), rgba(222, 184, 135, 0.8), rgba(139, 69, 19, 0.8), rgba(244, 164, 96, 0.8)); /* Warm earthy tones */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     animation: gradientBackground 10s ease infinite;
