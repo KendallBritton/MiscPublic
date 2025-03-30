@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.75); /* Dark background for contrast */
+    background-color: #5c3a1e;
 }
 
 .background-layer {
