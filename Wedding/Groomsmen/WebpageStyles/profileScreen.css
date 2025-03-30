@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: transparent; /* Initial color */
-    animation: backgroundColorTransition 10s ease infinite; /* Animate background-color */
+    
 }
 
 @keyframes backgroundColorTransition {
