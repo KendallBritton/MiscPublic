@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: transparent; /* Initial color */
-    
+    /*animation: backgroundColorTransition 10s ease infinite; /* Animate background-color */
 }
 
 @keyframes backgroundColorTransition {
@@ -30,7 +30,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1; /* Place it behind all other content */
-    background: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Gradient background */
+    background-image: linear-gradient(45deg, #a0522d, #deb887, #8b4513, #f4a460); /* Gradient background */
     background-size: 400% 400%; /* For animated gradients */
     animation: gradientBackground 10s ease infinite; /* Optional animation */
 }
