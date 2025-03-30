@@ -13,19 +13,13 @@ body {
 
 @keyframes backgroundColorTransition {
     0% {
-        background-color: #a0522d; /* First color */
-    }
-    25% {
-        background-color: #deb887; /* Second color */
+        background-color: #d3a978;
     }
     50% {
-        background-color: #8b4513; /* Third color */
-    }
-    75% {
-        background-color: #f4a460; /* Fourth color */
+        background-color: #a45b25;
     }
     100% {
-        background-color: #a0522d; /* Back to the first color */
+        background-color: #d3a978;
     }
 }
 
