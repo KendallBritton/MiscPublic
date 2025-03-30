@@ -7,7 +7,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #5c3a1e;
+    background-color: #a0522d; /* Initial color */
+    animation: backgroundColorTransition 10s ease infinite; /* Animate background-color */
+}
+
+@keyframes backgroundColorTransition {
+    0% {
+        background-color: #a0522d; /* First color */
+    }
+    25% {
+        background-color: #deb887; /* Second color */
+    }
+    50% {
+        background-color: #8b4513; /* Third color */
+    }
+    75% {
+        background-color: #f4a460; /* Fourth color */
+    }
+    100% {
+        background-color: #a0522d; /* Back to the first color */
+    }
 }
 
 .background-layer {
