@@ -235,5 +235,8 @@ function calculateAverageGradientColor() {
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
-// Call the function on page load
-document.addEventListener("DOMContentLoaded", calculateAverageGradientColor);
+// Run the function every second
+document.addEventListener("DOMContentLoaded", () => {
+    calculateAverageGradientColor(); // Run immediately on page load
+    setInterval(calculateAverageGradientColor, 1000); // Run every second
+});
