@@ -196,3 +196,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".container2").style.display = "none"; 
 });
+
+function calculateAverageGradientColor() {
+    // Create a canvas element
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // Set canvas dimensions
+    canvas.width = 100;
+    canvas.height = 100;
+
+    // Draw the gradient on the canvas
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    gradient.addColorStop(0, "#a0522d"); // First color
+    gradient.addColorStop(0.33, "#deb887"); // Second color
+    gradient.addColorStop(0.66, "#8b4513"); // Third color
+    gradient.addColorStop(1, "#f4a460"); // Fourth color
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Get pixel data from the canvas
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const pixels = imageData.data;
+
+    // Calculate the average color
+    let r = 0, g = 0, b = 0;
+    for (let i = 0; i < pixels.length; i += 4) {
+        r += pixels[i];     // Red
+        g += pixels[i + 1]; // Green
+        b += pixels[i + 2]; // Blue
+    }
+    const pixelCount = pixels.length / 4;
+    r = Math.floor(r / pixelCount);
+    g = Math.floor(g / pixelCount);
+    b = Math.floor(b / pixelCount);
+
+    // Set the body's background color to the average color
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+
+// Call the function on page load
+document.addEventListener("DOMContentLoaded", calculateAverageGradientColor);
