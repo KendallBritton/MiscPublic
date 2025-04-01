@@ -196,6 +196,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .container3 {
@@ -640,6 +641,10 @@ body {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .container3 .summary-and-qualifications {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
+    }
+    .container3 .summary-and-qualifications .qualifications-list{
         padding: 15px; /* Reduce padding for smaller screens */
         font-size: 1em; /* Adjust font size for better readability */
     }
