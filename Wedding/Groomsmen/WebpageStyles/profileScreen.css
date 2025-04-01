@@ -196,7 +196,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: auto;
 }
 
 .container3 {
@@ -589,18 +588,36 @@ body {
 }
 
 .parallax-container {
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    --parallax-item-offset: 0px; /* Default value */
-}
-.parallax-item {
+    height: 100vh; /* Allow it to grow based on content */
+    max-height: calc(100vh - 100px); /* Ensure it doesn't exceed the viewport height minus padding */
+    width: 100%; /* Full width of the screen */
+    max-width: 400px; /* Limit the maximum width */
+    overflow: hidden; /* Enable vertical scrolling for overflowing content */
     position: relative;
-    padding: 100px;
+    padding: 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    background: rgba(255, 255, 255, 0.15); /* Optional: Add a semi-transparent background */
+    border-radius: 16px; /* Smooth rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Depth effect */
+}
+
+/* Parallax items */
+.parallax-item {
+    height: 290px; /* Ensure it doesn't exceed the viewport height minus padding */
+    max-height: 300px; /* Ensure it doesn't exceed the viewport height minus padding */
+    position: relative;
+    padding: 20px; /* Reduce padding for smaller screens */
     background-color: #f0f0f0;
-    margin-top: var(--parallax-item-offset); /* Adjust margin based on offset */
     margin-bottom: 20px;
     animation: parallaxEffect 60s infinite;
+    width: 100%; /* Ensure it fits within the container */
+    box-sizing: border-box; /* Include padding in width calculations */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack content vertically */
 }
 
 /* Adjust the keyframes to calculate the total height dynamically */
@@ -648,11 +665,29 @@ body {
         padding: 15px; /* Reduce padding for smaller screens */
         font-size: 1em; /* Adjust font size for better readability */
     }
+    .parallax-container {
+        max-height: calc(100vh - 50px); /* Adjust height for smaller screens */
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .parallax-item {
+        padding: 15px; /* Reduce padding for smaller screens */
+        font-size: 0.9em; /* Adjust font size for better readability */
+    }
 }
 
 @media (max-width: 480px) {
     .container3 .summary-and-qualifications {
         padding: 10px; /* Further reduce padding for very small screens */
         font-size: 0.9em; /* Adjust font size for smaller devices */
+    }
+    .parallax-container {
+        max-height: calc(100vh - 30px); /* Adjust height for very small screens */
+        padding: 5px; /* Further reduce padding for very small screens */
+    }
+
+    .parallax-item {
+        padding: 10px; /* Further reduce padding for very small screens */
+        font-size: 0.8em; /* Adjust font size for smaller devices */
     }
 }
