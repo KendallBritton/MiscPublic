@@ -659,6 +659,10 @@ body {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    .container2 .summary {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
+    }
     .container3 .summary-and-qualifications {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -679,6 +683,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container2 .summary {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
+    }
     .container3 .summary-and-qualifications {
         padding: 10px; /* Further reduce padding for very small screens */
         font-size: 0.9em; /* Adjust font size for smaller devices */
