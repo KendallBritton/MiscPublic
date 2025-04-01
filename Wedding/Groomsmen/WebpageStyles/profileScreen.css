@@ -196,6 +196,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .container3 {
@@ -588,6 +589,7 @@ body {
 }
 
 .parallax-container {
+    min-height: 300px; /* Allow it to grow based on content */
     height: 100vh; /* Allow it to grow based on content */
     max-height: calc(100vh - 100px); /* Ensure it doesn't exceed the viewport height minus padding */
     width: 100%; /* Full width of the screen */
