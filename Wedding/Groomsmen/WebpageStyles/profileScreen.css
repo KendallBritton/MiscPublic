@@ -292,11 +292,10 @@ body {
     text-align: center;
     color: #1B1B1B;
     line-height: 1.6;
-    max-width: 100%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%; /* Ensure it fits within the container */
+    max-width: 100%; /* Prevent it from exceeding the container width */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+    overflow: hidden; /* Prevent content from overflowing */
 }
 
 .container3 .summary-and-qualifications .summary {
@@ -635,5 +634,20 @@ body {
 @media (orientation: landscape) {
     html, body {
         overflow: auto; /* Enable scrolling in landscape mode if needed */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container3 .summary-and-qualifications {
+        padding: 15px; /* Reduce padding for smaller screens */
+        font-size: 1em; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .container3 .summary-and-qualifications {
+        padding: 10px; /* Further reduce padding for very small screens */
+        font-size: 0.9em; /* Adjust font size for smaller devices */
     }
 }
