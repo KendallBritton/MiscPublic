@@ -670,6 +670,9 @@ body {
         align-items: center; /* Center items vertically */
         flex-direction: column;
     }
+    .container3 .summary-and-qualifications .qualifications-list li {
+        width: 100%;
+    }
     .parallax-container {
         max-height: calc(100vh - 50px); /* Adjust height for smaller screens */
         padding: 5px; /* Reduce padding for smaller screens */
