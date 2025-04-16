@@ -1,3 +1,7 @@
+:root {
+    --parallax-item-gap: 20px; /* Default gap for larger screens */
+}
+
 /* Main body styling */
 body {
     font-family: Arial, sans-serif;
@@ -296,7 +300,8 @@ body {
     width: 100%; /* Ensure it fits within the container */
     max-width: 700px;
     box-sizing: border-box; /* Include padding and border in width calculations */
-    overflow: auto; /* Prevent content from overflowing */
+    overflow-y: auto; /* Prevent content from overflowing */
+    overflow-x: hidden; /* Prevent content from overflowing */
 }
 
 .container3 .summary-and-qualifications .summary {
@@ -313,10 +318,24 @@ body {
 .container3 .summary-and-qualifications .qualifications-list {
     margin-top: 20px;
     padding: 0;
-    max-width: 700px;
-    background: none; /* Remove individual background */
-    border: none; /* Remove individual border */
-    animation: none; /* Remove individual animation */
+    max-width: 100%; /* Ensure it spans the full width of the parent */
+    display: flex; /* Enable Flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items with the header */
+    gap: 15px; /* Add spacing between items */
+    list-style-type: none; /* Remove default bullets */
+}
+
+.container3 .summary-and-qualifications .qualifications-list li {
+    position: relative;
+    margin-bottom: 15px;
+    width: calc(50% - 10px); /* Adjust width to create two columns with spacing */
+    max-width: 300px; /* Limit the width for smaller screens */
+    text-align: center; /* Center-align text inside the list items */
+    box-sizing: border-box; /* Include padding in width calculations */
+    animation: staggeredFadeIn 0.6s ease-out forwards; /* Apply staggered animation */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 
@@ -520,34 +539,6 @@ body {
     opacity: 0.5; /* Dim appearance to indicate disabled */
 }
 
-/* Main list styles */
-.qualifications-list {
-    margin-top: 20px;
-    list-style-type: none; /* Remove default bullets */
-    padding-left: 0;
-    text-align: left;
-    font-size: 1.1em;
-    color: #1B1B1B;
-    line-height: 1.6;
-    position: relative;
-    display: flex; /* Use flex to split items into two columns */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 80%; /* Adjust width to fit within the centered container */
-    max-width: 800px; /* Optional: Limit the max width for a neat appearance */
-}
-
-.qualifications-list li {
-    position: relative;
-    margin-bottom: 15px;
-    width: 45%; /* Adjust width to create two columns */
-    opacity: 0; /* Make items invisible initially */
-    transform: translateX(-30px); /* Start slightly from the left */
-    animation: staggeredFadeIn 0.6s ease-out forwards; /* Apply staggered animation */
-    transition: transform 0.3s ease, color 0.3s ease;
-    padding-left: 25px; /* Add space for the bullet */
-}
-
 /* Staggered entrance animation */
 @keyframes staggeredFadeIn {
     0% {
@@ -628,16 +619,16 @@ body {
         transform: translateY(0);
     }
     16%, 21% {
-        transform: translateY(calc((var(--parallax-item-height) + 10px) * -1)); /* Move down one event space */
+        transform: translateY(calc((var(--parallax-item-height) + var(--parallax-item-gap)) * -1)); /* Move down one event space */
     }
     37%, 42% {
-        transform: translateY(calc((var(--parallax-item-height) + 15px) * -2)); /* Move down one event space */
+        transform: translateY(calc((var(--parallax-item-height) + var(--parallax-item-gap)) * -2)); /* Move down one event space */
     }
     58%, 63% {
-        transform: translateY(calc((var(--parallax-item-height) + 15px) * -3)); /* Move down one event space */
+        transform: translateY(calc((var(--parallax-item-height) + var(--parallax-item-gap)) * -3)); /* Move down one event space */
     }
     79%, 84% {
-        transform: translateY(calc((var(--parallax-item-height) + 15px) * -4)); /* Move down one event space */
+        transform: translateY(calc((var(--parallax-item-height) + var(--parallax-item-gap)) * -4)); /* Move down one event space */
     }
     100% {
         transform: translateY(0); /* Return to the original position */
@@ -659,6 +650,11 @@ body {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+
+    :root {
+        --parallax-item-gap: 15px; /* Smaller gap for very small screens */
+    }
+
     .container2 .summary {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -667,9 +663,12 @@ body {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
     }
-    .container3 .summary-and-qualifications .qualifications-list{
+    .container3 .summary-and-qualifications .qualifications-list {
         padding: 15px; /* Reduce padding for smaller screens */
         font-size: 1em; /* Adjust font size for better readability */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        flex-direction: column;
     }
     .parallax-container {
         max-height: calc(100vh - 50px); /* Adjust height for smaller screens */
@@ -683,6 +682,11 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    :root {
+        --parallax-item-gap: 10px; /* Smallest gap for very small screens */
+    }
+    
     .container2 .summary {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -700,4 +704,19 @@ body {
         padding: 10px; /* Further reduce padding for very small screens */
         font-size: 0.8em; /* Adjust font size for smaller devices */
     }
+}
+
+/* Hide WebKit scrollbars globally */
+*::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* For Internet Explorer and Edge */
+* {
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
 }

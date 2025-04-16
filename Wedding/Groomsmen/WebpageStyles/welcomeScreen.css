@@ -92,3 +92,18 @@ button:active {
         overflow: auto; /* Enable scrolling in landscape mode if needed */
     }
 }
+
+/* Hide WebKit scrollbars globally */
+*::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* For Internet Explorer and Edge */
+* {
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
