@@ -237,8 +237,3 @@ function calculateAverageGradientColor() {
 
 // Call the function on page load
 document.addEventListener("DOMContentLoaded", calculateAverageGradientColor);
-
-document.querySelectorAll('.arrow-navigation a').forEach((arrow) => {
-    arrow.removeAttribute('title'); // Remove the title attribute
-    arrow.setAttribute('href', 'javascript:void(0);'); // Prevent default behavior
-});
