@@ -1,0 +1,71 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Your existing loadingScreen.js code
+    const currentUserName = localStorage.getItem("currentUserAccessName");
+
+    // Get the video source element
+    const videoSource = document.getElementById("videoSource");
+    const backgroundVideo = document.getElementById("backgroundVideo");
+
+    // Function to determine the video source
+    function getVideoSource(currentUserName) {
+        const videoMap = {
+            "Chris": "../Images/Chris/",
+            "Jalen": "../Images/Jalen/",
+            "Jeremiah": "../Images/Jeremiah/",
+            "Kaleb": "../Images/Kaleb/",
+            "Kayno": "../Images/Kayno/",
+            "Ryan": "../Images/Ryan/",
+            "Terrell": "../Images/Terrell/Test-Loading-Screen-Video.mov",
+            "Ty": "../Images/Ty/",
+        };
+
+        return videoMap[currentUserName] || "../Videos/Default-Video.mp4"; // Fallback to default video
+    }
+
+    // Set the video still sources based on the current user's name
+    const videoStillMap = {
+        "Chris": "../Images/Chris/",
+        "Jalen": "../Images/Jalen/",
+        "Jeremiah": "../Images/Jeremiah/",
+        "Kaleb": "../Images/Kaleb/",
+        "Kayno": "../Images/Kayno/",
+        "Ryan": "../Images/Ryan/",
+        "Terrell": "../Images/Terrell/Toyota-Still.png",
+        "Ty": "../Images/Ty/",
+    };
+
+    // Populate the video source
+    const videoSrc = getVideoSource(currentUserName);
+    videoSource.src = videoSrc;
+
+    // Set the body background image from the videoStillMap
+    const videoStillSrc = videoStillMap[currentUserName] || "../Images/Default-Still.jpg"; // Fallback to a default still image
+    document.body.style.setProperty("--background-image", `url('${videoStillSrc}')`);
+
+
+    // Reload the video to apply the new source
+    backgroundVideo.load();
+
+});
+
+
+// Map names to video sources
+const profileMap = {
+    "Chris": "../WebpageLayouts/profileScreen.html",
+    "Jalen": "../WebpageLayouts/profileScreen.html",
+    "Jeremiah": "../WebpageLayouts/profileScreen.html",
+    "Kaleb": "../WebpageLayouts/profileScreen.html",
+    "Kayno": "../WebpageLayouts/profileScreen.html",
+    "Ryan": "../WebpageLayouts/profileScreen.html",
+    "Terrell": "../WebpageLayouts/profileScreen.html",
+    "Ty": "../WebpageLayouts/profileScreen.html",
+};
+
+// Remove the loop attribute for the first playthrough
+backgroundVideo.removeAttribute("loop");
+
+// Add an event listener for when the video ends
+backgroundVideo.addEventListener("ended", () => {
+    // Redirect to the new page
+    window.location.href = profileMap[localStorage.getItem("currentUserAccessName")]; // Replace with your target page
+});

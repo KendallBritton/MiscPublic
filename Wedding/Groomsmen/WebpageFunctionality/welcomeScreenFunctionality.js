@@ -141,7 +141,7 @@ function checkName() {
         sessionStorage.setItem("accessGranted", "true"); // Set a flag in sessionStorage to indicate valid access
         
         // Start the countdown
-        startCountdown(10); // 10 seconds countdown
+        startCountdown(5); // 10 seconds countdown
 
 
     } else {
@@ -164,7 +164,7 @@ function startCountdown(seconds) {
         if (seconds <= 0) {
             clearInterval(countdownTimer);
             countdown.style.display = "none"; // Hide countdown when done
-            window.location.href = "./WebpageLayouts/profileScreen.html"; // Redirect to another webpage
+            window.location.href = "./WebpageLayouts/loadingScreen.html"; // Redirect to another webpage
         }
         seconds--;
     }, 1000);
