@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to determine the video source
     function getVideoSource(currentUserName) {
         const videoMap = {
-            "Chris": "../Images/Chris/",
-            "Jalen": "../Images/Jalen/",
-            "Jeremiah": "../Images/Jeremiah/",
-            "Kaleb": "../Images/Kaleb/",
-            "Kayno": "../Images/Kayno/",
-            "Ryan": "../Images/Ryan/",
-            "Terrell": "../Images/Terrell/Test-Loading-Screen-Video.mov",
-            "Ty": "../Images/Ty/",
+            "Chris": "../Images/Chris/Chris-Loading-Screen.mov",
+            "Jalen": "../Images/Jalen/Jalen-Loading-Screen.mov",
+            "Jeremiah": "../Images/Jeremiah/Jeremiah-Loading-Screen.mov",
+            "Kaleb": "../Images/Kaleb/Kaleb-Loading-Screen.mov",
+            "Kayno": "../Images/Kayno/Kayno-Loading-Screen.mov",
+            "Ryan": "../Images/Ryan/Ryan-Loading-Screen.mov",
+            "Terrell": "../Images/Terrell/Terrell-Loading-Screen.mov",
+            "Ty": "../Images/Ty/Ty-Loading-Screen.mov",
         };
 
         return videoMap[currentUserName] || "../Videos/Default-Video.mp4"; // Fallback to default video
