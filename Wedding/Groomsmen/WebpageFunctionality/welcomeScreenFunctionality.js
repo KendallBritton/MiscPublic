@@ -1,3 +1,9 @@
+// Preload the loadingScreen.html page in an invisible iframe
+const preloadFrame = document.createElement("iframe");
+preloadFrame.src = "../WebpageLayouts/loadingScreen.html";
+preloadFrame.style.display = "none"; // Hide the iframe
+document.body.appendChild(preloadFrame);
+
 // Create the grid container
 const gridContainer = document.createElement('div');
 gridContainer.style.position = 'fixed';
