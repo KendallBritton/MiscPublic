@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Set the video still sources based on the current user's name
     const videoStillMap = {
-        "Chris": "../Images/Chris/",
-        "Jalen": "../Images/Jalen/",
-        "Jeremiah": "../Images/Jeremiah/",
-        "Kaleb": "../Images/Kaleb/",
-        "Kayno": "../Images/Kayno/",
-        "Ryan": "../Images/Ryan/",
-        "Terrell": "../Images/Terrell/Toyota-Still.png",
-        "Ty": "../Images/Ty/",
+        "Chris": "../Images/Chris/Chris-Still.png",
+        "Jalen": "../Images/Jalen/Jalen-Still.png",
+        "Jeremiah": "../Images/Jeremiah/Jeremiah-Still.png",
+        "Kaleb": "../Images/Kaleb/Kaleb-Still.png",
+        "Kayno": "../Images/Kayno/Kayno-Still.png",
+        "Ryan": "../Images/Ryan/Ryan-Still.png",
+        "Terrell": "../Images/Terrell/Terrell-Still.png",
+        "Ty": "../Images/Ty/Ty-Still.png",
     };
 
     // Populate the video source
