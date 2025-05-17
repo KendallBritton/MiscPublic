@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoStillSrc = videoStillMap[currentUserName] || "../Images/Default-Still.jpg"; // Fallback to a default still image
     document.body.style.setProperty("--background-image", `url('${videoStillSrc}')`);
 
+    // Set the poster attribute for the video
+    backgroundVideo.poster = videoStillSrc;
 
     // Reload the video to apply the new source
     backgroundVideo.load();
