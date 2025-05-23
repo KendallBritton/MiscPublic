@@ -106,6 +106,13 @@ function handleCheckboxClick(selectedValue) {
 function handleSubmit() {
 
     alert('Form submitted!'); // Placeholder for form submission logic
+
+    // TODO: Update to use maps
+    // Reveal the User Profile Link when submit is clicked
+    const revealProfileLink = document.getElementById("Terrell-Profile-Link");
+    if (revealProfileLink) {
+        revealProfileLink.textContent = "Terrell Britton (Submitted)";
+    }
 }
 
 // Response Submit Logic
