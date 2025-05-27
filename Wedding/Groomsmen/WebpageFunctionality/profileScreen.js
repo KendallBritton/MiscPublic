@@ -62,7 +62,7 @@ document.getElementById("show-next-page3").addEventListener("click", function (e
 });
 
 document.getElementById("show-next-page4").addEventListener("click", function (e) {
-    if (document.title.includes(localStorage.getItem("currentUserAccessName"))) {
+    if (window.location.pathname.includes(localStorage.getItem("currentUserAccessName"))) {
         e.preventDefault();
         document.querySelector(".container3").style.display = "none";
         document.querySelector(".container4").style.display = "flex"; // Show container4
