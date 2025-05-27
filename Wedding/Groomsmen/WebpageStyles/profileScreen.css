@@ -652,7 +652,7 @@ body {
 @media (max-width: 768px) {
 
     :root {
-        --parallax-item-gap: 15px; /* Smaller gap for very small screens */
+        --parallax-item-gap: 20px; /* Smaller gap for very small screens */
     }
 
     .container2 .summary {
@@ -687,7 +687,7 @@ body {
 @media (max-width: 480px) {
 
     :root {
-        --parallax-item-gap: 10px; /* Smallest gap for very small screens */
+        --parallax-item-gap: 20px; /* Smallest gap for very small screens */
     }
     
     .container2 .summary {
