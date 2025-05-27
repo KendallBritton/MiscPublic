@@ -62,9 +62,13 @@ document.getElementById("show-next-page3").addEventListener("click", function (e
 });
 
 document.getElementById("show-next-page4").addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(".container3").style.display = "none";
-    document.querySelector(".container4").style.display = "flex"; // Show container4
+    if (document.title.includes(localStorage.getItem("currentUserAccessName"))) {
+        e.preventDefault();
+        document.querySelector(".container3").style.display = "none";
+        document.querySelector(".container4").style.display = "flex"; // Show container4
+    } else {
+        alert("You don't have access to this page within this user's profile.");
+    }
 });
 
 // Left arrow to proceed to previous page
