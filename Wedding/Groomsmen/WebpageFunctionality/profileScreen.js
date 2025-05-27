@@ -102,42 +102,12 @@ function handleCheckboxClick(selectedValue) {
     }
 }
 
-// Map to reveal names to their profile screen
-const profileMapLink = {
-    "Chris": "Chris-Profile-Link",
-    "Jalen": "Jalen-Profile-Link",
-    "Jeremiah": "Jeremiah-Profile-Link",
-    "Kaleb": "Kaleb-Profile-Link",
-    "Kayno": "Kayno-Profile-Link",
-    "Ryan": "Ryan-Profile-Link",
-    "Terrell": "Terrell-Profile-Link",
-    "Ty": "Ty-Profile-Link",
-};
-
-// Map to reveal names to their profile screen
-const profileMapName = {
-    "Chris": "Chris McClurkin",
-    "Jalen": "Jalen Goodwin",
-    "Jeremiah": "Jeremiah Stringfield",
-    "Kaleb": "Kaleb Cody",
-    "Kayno": "Kayno Speights",
-    "Ryan": "Ryan Davenport",
-    "Terrell": "Terrell Britton",
-    "Ty": "Ty Wilson",
-};
-
 
 // Function to handle the submit button
 function handleSubmit() {
 
     alert('Form submitted!'); // Placeholder for form submission logic
 
-    // TODO: Update to use maps
-    // Reveal the User Profile Link when submit is clicked
-    const revealProfileLink = document.getElementById(profileMapLink[localStorage.getItem("currentUserAccessName")]);
-    if (revealProfileLink) {
-        revealProfileLink.textContent = profileMapName[localStorage.getItem("currentUserAccessName")];
-    }
 }
 
 // Response Submit Logic
