@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Your existing loadingScreen.js code
     const currentUserName = localStorage.getItem("currentUserAccessName");
 
+    const loadOtherUserProfile = sessionStorage.getItem("profileTravelTo");
+
     // Get the video source element
     const videoSource = document.getElementById("videoSource");
     const backgroundVideo = document.getElementById("backgroundVideo");
 
     // Function to determine the video source
-    function getVideoSource(currentUserName) {
+    function getVideoSource(currentUserName, loadOtherUserProfile) {
         const videoMap = {
             "Chris": "../Images/Chris/Chris-Loading-Screen.mov",
             "Jalen": "../Images/Jalen/Jalen-Loading-Screen.mov",
@@ -18,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
             "Terrell": "../Images/Terrell/Terrell-Loading-Screen.mov",
             "Ty": "../Images/Ty/Ty-Loading-Screen.mov",
         };
+
+        if (loadOtherUserProfile) {
+            // If navigating to another user's profile, use the video for that user
+            return videoMap[loadOtherUserProfile]; // Fallback to default video
+        }
 
         return videoMap[currentUserName] || "../Videos/Default-Video.mp4"; // Fallback to default video
     }
@@ -35,12 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Populate the video source
-    const videoSrc = getVideoSource(currentUserName);
+    const videoSrc = getVideoSource(currentUserName, loadOtherUserProfile);
     videoSource.src = videoSrc;
+    
+    if (loadOtherUserProfile) {
 
-    // Set the body background image from the videoStillMap
-    const videoStillSrc = videoStillMap[currentUserName] || "../Images/Default-Still.jpg"; // Fallback to a default still image
-    document.body.style.setProperty("--background-image", `url('${videoStillSrc}')`);
+        // Set the body background image from the videoStillMap
+        videoStillSrc = videoStillMap[loadOtherUserProfile] || "../Images/Default-Still.jpg"; // Fallback to a default still image
+        document.body.style.setProperty("--background-image", `url('${videoStillSrc}')`);
+
+    } else {
+
+        // Set the body background image from the videoStillMap
+        videoStillSrc = videoStillMap[currentUserName] || "../Images/Default-Still.jpg"; // Fallback to a default still image
+        document.body.style.setProperty("--background-image", `url('${videoStillSrc}')`);
+
+    }
+        
 
     // Set the poster attribute for the video
     backgroundVideo.poster = videoStillSrc;
@@ -53,14 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Map names to video sources
 const profileMap = {
-    "Chris": "../WebpageLayouts/profileScreen.html",
-    "Jalen": "../WebpageLayouts/profileScreen.html",
-    "Jeremiah": "../WebpageLayouts/profileScreen.html",
-    "Kaleb": "../WebpageLayouts/profileScreen.html",
-    "Kayno": "../WebpageLayouts/profileScreen.html",
-    "Ryan": "../WebpageLayouts/profileScreen.html",
-    "Terrell": "../WebpageLayouts/profileScreen.html",
-    "Ty": "../WebpageLayouts/profileScreen.html",
+    "Chris": "../WebpageLayouts/profileScreenChris.html",
+    "Jalen": "../WebpageLayouts/profileScreenJalen.html",
+    "Jeremiah": "../WebpageLayouts/profileScreenJeremiah.html",
+    "Kaleb": "../WebpageLayouts/profileScreenKaleb.html",
+    "Kayno": "../WebpageLayouts/profileScreenKayno.html",
+    "Ryan": "../WebpageLayouts/profileScreenRyan.html",
+    "Terrell": "../WebpageLayouts/profileScreenTerrell.html",
+    "Ty": "../WebpageLayouts/profileScreenTy.html",
 };
 
 // Remove the loop attribute for the first playthrough
@@ -68,6 +86,21 @@ backgroundVideo.removeAttribute("loop");
 
 // Add an event listener for when the video ends
 backgroundVideo.addEventListener("ended", () => {
-    // Redirect to the new page
-    window.location.href = profileMap[localStorage.getItem("currentUserAccessName")]; // Replace with your target page
+
+    const loadOtherUserProfile = sessionStorage.getItem("profileTravelTo");
+
+    if (loadOtherUserProfile) {
+
+        sessionStorage.removeItem('profileTravelTo'); // Clear previous profile context
+
+        // Redirect to the other user page
+        window.location.href = profileMap[loadOtherUserProfile]; // Replace with your target page
+
+    } else {
+
+        // Redirect to the user's own page
+        window.location.href = profileMap[localStorage.getItem("currentUserAccessName")]; // Replace with your target page
+
+    }
+
 });

@@ -115,61 +115,64 @@ function handleSubmit() {
 }
 
 // Response Submit Logic
-document.getElementById('submit-button').addEventListener('click', () => {
+if (document.getElementById("submit-button")) {
 
-    // Retrieve the existing map from localStorage
-    let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
-    let responseSubmissionMap = new Map(savedMapArray);
+    document.getElementById('submit-button').addEventListener('click', () => {
 
-    // Add the current user to the Map
-    responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
+        // Retrieve the existing map from localStorage
+        let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
+        let responseSubmissionMap = new Map(savedMapArray);
 
-    // Convert the updated Map to an array and save it to localStorage
-    localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
+        // Add the current user to the Map
+        responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
 
-    // Enable the sidebar
-    document.querySelector('.sidebar').classList.remove('locked-sidebar');
-    document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+        // Convert the updated Map to an array and save it to localStorage
+        localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
 
-    // Remove the checkboxes and submit button
-    document.getElementById("checkbox-section").remove();
-    document.getElementById("submit-button").remove();
+        // Enable the sidebar
+        document.querySelector('.sidebar').classList.remove('locked-sidebar');
+        document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
 
-    // Uncomment Below for full functionality
+        // Remove the checkboxes and submit button
+        document.getElementById("checkbox-section").remove();
+        document.getElementById("submit-button").remove();
 
-    // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
-    //     subject: 'Update From Your Groomsmen Web Service',
-    //     message: userName + ' has chosen to be a groomsmen!',
-    // })
-    // .then(response => {
-    //     console.log("Email sent successfully!", response);
+        // Uncomment Below for full functionality
 
-    // // Retrieve the existing map from localStorage
-    // let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
-    // let responseSubmissionMap = new Map(savedMapArray);
+        // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
+        //     subject: 'Update From Your Groomsmen Web Service',
+        //     message: userName + ' has chosen to be a groomsmen!',
+        // })
+        // .then(response => {
+        //     console.log("Email sent successfully!", response);
 
-    // // Add the current user to the Map
-    // responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
+        // // Retrieve the existing map from localStorage
+        // let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
+        // let responseSubmissionMap = new Map(savedMapArray);
 
-    // // Convert the updated Map to an array and save it to localStorage
-    // localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
+        // // Add the current user to the Map
+        // responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
 
-    // // Unlocks the menu bar
-    // document.querySelector('.sidebar').classList.remove('locked-sidebar');
-    // document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
+        // // Convert the updated Map to an array and save it to localStorage
+        // localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
 
-    //     // Remove the checkboxes and submit button
-    //     document.getElementById("checkboxContainer").remove();
-    //     document.getElementById("submitButton").remove();
+        // // Unlocks the menu bar
+        // document.querySelector('.sidebar').classList.remove('locked-sidebar');
+        // document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
 
-    // })
-    // .catch(error => {
-    //     console.error("Failed to send email:", error);
+        //     // Remove the checkboxes and submit button
+        //     document.getElementById("checkboxContainer").remove();
+        //     document.getElementById("submitButton").remove();
 
-    //     // Show an error message (optional)
-    //     alert("There was an error submitting your response. Please try again.");
-    // });
-});
+        // })
+        // .catch(error => {
+        //     console.error("Failed to send email:", error);
+
+        //     // Show an error message (optional)
+        //     alert("There was an error submitting your response. Please try again.");
+        // });
+    });
+}
 
 // Calculate the height of the parallax item and set it as a CSS variable
 document.addEventListener("DOMContentLoaded", () => {
@@ -243,3 +246,19 @@ function calculateAverageGradientColor() {
 
 // Call the function on page load
 document.addEventListener("DOMContentLoaded", calculateAverageGradientColor);
+
+// Add event listeners to all sidebar links to set a parameter in sessionStorage
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+
+        e.preventDefault(); // Prevent default navigation
+
+        // Sets link context to load the correct profile page
+        const firstName = this.textContent.trim().split(' ')[0];
+        sessionStorage.setItem('profileTravelTo', firstName);
+
+        // Now manually navigate to the link's href
+        window.location.href = "../WebpageLayouts/loadingScreen.html";
+
+    });
+});

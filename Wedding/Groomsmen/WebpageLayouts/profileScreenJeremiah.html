@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, viewport-fit=cover">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="../WebpageStyles/profileScreen.css">
+</head>
+<body>
+    <div class="background-layer"></div> <!-- Extra background layer -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</div>
+    <div class="sidebar">
+        <a href="#" id="Terrell-Profile-Link">Terrell Britton</a>       <!-- Placeholder for Terrell Britton -->
+        <a href="#" id="Kaleb-Profile-Link">Kaleb Cody</a>              <!-- Placeholder for Kaleb Cody -->
+        <a href="#" id="Ryan-Profile-Link">Ryan Davenport</a>           <!-- Placeholder for Ryan Davenport -->
+        <a href="#" id="Jalen-Profile-Link">Jalen Goodwin</a>           <!-- Placeholder for Jalen Goodwin -->
+        <a href="#" id="Chris-Profile-Link">Chris McClurkin</a>         <!-- Placeholder for Chris McClurkin -->
+        <a href="#" id="Kayno-Profile-Link">Kayno Speights</a>          <!-- Placeholder for Kayno Speights -->
+        <a href="#" id="Jeremiah-Profile-Link">Jeremiah Stringfield</a> <!-- Placeholder for Jeremiah Stringfield -->
+        <a href="#" id="Ty-Profile-Link">Ty Wilson</a>                  <!-- Placeholder for Ty Wilson --> 
+    </div>
+
+    <div class="container">
+
+        <h1>Welcome!</h1>
+        
+        <!-- Short summary section -->
+        <div class="summary">
+            <p>Welcome to your personalized page! Here you can find all the essential details about your account and explore the features available to you. 
+                This is where you can customize your preferences, view your activity, and get updates on new content. Dive in and start exploring!</p>
+        </div>
+
+        <div class="photo-collage">
+            <img src="../Images/Thumbnail.png" alt="Photo 1">
+            <img src="../Images/Thumbnail.png" alt="Photo 2">
+            <img src="../Images/Thumbnail.png" alt="Photo 3">
+            <img src="../Images/Thumbnail.png" alt="Photo 4">
+            <img src="../Images/Thumbnail.png" alt="Photo 5">
+            <img src="../Images/Thumbnail.png" alt="Photo 6">
+        </div>
+        
+        <div class="arrow-navigation">
+            <a href="#" class="scroll-arrow" id="">&#8592;</a> <!-- Left arrow -->
+            <span class="circle">&#9679;</span> <!-- Closed circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <a href="#" class="scroll-arrow" id="show-next-page2">&#8594;</a> <!-- Right arrow -->
+        </div>
+  
+    </div>
+
+    <div class="container2">
+        <h1>Origin Of Friendship</h1>
+        
+        <!-- Short summary section -->
+        <div class="summary">
+            <p>Welcome to your personalized page! Here you can find all the essential details about your account and explore the features available to you. 
+                This is where you can customize your preferences, view your activity, and get updates on new content. Dive in and start exploring!</p>
+        </div>
+
+        <div class="parallax-container">
+            <div class="parallax-item">
+                <h2>Event 1</h2>
+                <p>Description for event 1...</p>
+            </div>
+            <!-- More events... -->
+            <div class="parallax-item">
+                <h2>Event 2</h2>
+                <p>Description for event 2...</p>
+            </div>
+            <div class="parallax-item">
+                <h2>Event 3</h2>
+                <p>Description for event 3...</p>
+            </div>
+            <div class="parallax-item">
+                <h2>Event 4</h2>
+                <p>Description for event 4...</p>
+            </div>
+            <div class="parallax-item">
+                <h2>Event 5</h2>
+                <p>Description for event 5...</p>
+            </div>
+        </div>
+        
+        <div class="arrow-navigation">
+            <a href="#" class="scroll-arrow" id="show-previous-page1">&#8592;</a> <!-- Left arrow -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9679;</span> <!-- Closed circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <a href="#" class="scroll-arrow" id="show-next-page3">&#8594;</a> <!-- Right arrow -->
+        </div>
+
+    </div>
+
+    <div class="container3">
+        <h1>Qualifications For Selection</h1>
+    
+        <div class="summary-and-qualifications">
+            <div class="summary">
+                <!-- Summary content here -->
+                <p>Welcome to your personalized page! Here you can find all the essential details about your account and explore the features available to you. 
+                    This is where you can customize your preferences, view your activity, and get updates on new content. Dive in and start exploring!</p>
+            </div>
+            <ul class="qualifications-list">
+                <!-- Qualifications list items here -->
+                <li>Empathy and understanding are key traits.</li>
+                <li>Trustworthiness ensures strong bonds.</li>
+                <li>Shared interests create meaningful connections.</li>
+                <li>Consistency builds lasting relationships.</li>
+                <li>Communication fosters mutual growth.</li>
+            </ul>
+        </div>
+    
+        <div class="arrow-navigation">
+            <a href="#" class="scroll-arrow" id="show-previous-page2">&#8592;</a> <!-- Left arrow -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9679;</span> <!-- Closed circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <a href="#" class="scroll-arrow" id="show-next-page4">&#8594;</a> <!-- Right arrow -->
+        </div>
+    </div>
+
+    <div class="container4">
+        <h1>The Verdict</h1>
+        
+        <!-- Short summary section -->
+        <div class="summary">
+            <p>Welcome to your personalized page! Here you can find all the essential details about your account and explore the features available to you. 
+                This is where you can customize your preferences, view your activity, and get updates on new content. Dive in and start exploring!</p>
+        </div>
+
+        <div class="checkbox-section" id="checkbox-section">
+            <label id="yes-label">
+                <input type="checkbox" name="verdict" value="yes" onclick="handleCheckboxClick('yes')"> Yes
+            </label>
+
+            <button id="submit-button" style="display: none;" onclick="handleSubmit()">Submit</button>
+        </div>
+            
+        <div class="arrow-navigation">
+            <a href="#" class="scroll-arrow" id="show-previous-page3">&#8592;</a> <!-- Left arrow -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9675;</span> <!-- Open circle -->
+            <span class="circle">&#9679;</span> <!-- Closed circle -->
+            <a href="#" class="scroll-arrow" id="">&#8594;</a> <!-- Right arrow -->
+        </div>
+
+    </div>
+
+    <script src="../WebpageFunctionality/profileScreen.js"></script>
+</body>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "wAKr9VycHSzrgVjqr",
+      });
+   })();
+</script>
+<script>
+    // Check if the access flag is set in sessionStorage
+    if (sessionStorage.getItem("accessGranted") !== "true") {
+        // Redirect to index.html if the flag is not set
+        window.location.href = "../index.html";
+    }
+</script>
+</html>
