@@ -149,6 +149,7 @@ body {
     grid-auto-rows: 1fr;  /* Auto height based on aspect ratio */
     gap: 10px; /* Adjust spacing between images */
     z-index: -1;
+    border-radius: 16px;
     overflow: hidden;
 }
 
