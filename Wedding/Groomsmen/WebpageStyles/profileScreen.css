@@ -726,19 +726,33 @@ body {
         max-width: 100vw !important;
         width: 100vw !important;
     }
+
     #collage-slider img#collage-main-img {
         max-width: 98vw !important;
         max-height: 60vh !important;
         border-radius: 8px !important;
     }
+
     #collage-thumbs img {
         width: 40px !important;
         height: 40px !important;
         border-radius: 6px !important;
     }
+
     #collage-prev, #collage-next {
         font-size: 2em !important;
         margin: 0 4px !important;
+    }
+    
+    #close-collage-popup {
+        top: 8px !important;
+        right: 8px !important;
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 2.5em !important;
+        background: #fff !important;
+        color: #a0522d !important;
+        z-index: 10001 !important;
     }
 }
 
