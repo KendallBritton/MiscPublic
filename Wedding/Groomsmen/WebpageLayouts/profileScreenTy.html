@@ -153,24 +153,29 @@
 
     <div id="collage-popup" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
         <div style="background:#fff; padding:32px; border-radius:20px; max-width:1400px; max-height:98vh; width:98vw; overflow:auto; position:relative; display:flex; flex-direction:column; align-items:center;">
-            <button id="close-collage-popup" class="scroll-arrow" style="position:absolute; top:12px; right:24px; font-size:2em; background:none; border:none; cursor:pointer;">&times;</button>
+            <button id="close-collage-popup" class="scroll-arrow"
+                style="position:absolute; top:8px; right:8px; font-size:2.2em; background:#fff; color:#a0522d; border:none; cursor:pointer; z-index:10001; width:48px; height:48px; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center;">
+                &times;
+            </button>
             <div id="collage-slider" style="display:flex; align-items:center; justify-content:center; width:100%; max-width:1100px; position:relative;">
-                <button id="collage-prev" class="scroll-arrow" style="background:none; border:none; font-size:2.5em; cursor:pointer; position:static; margin-right:32px; z-index:2;">&#8592;</button>
                 <div style="flex:1; display:flex; align-items:center; justify-content:center; min-width:0;">
                     <img id="collage-main-img"
-                        src="../Images/Chris/3D303606-B1A4-4732-BF2C-78575F11E9E7.jpeg"
+                        src="../Images/Ty/01D0EBF3-56E9-46CF-BD83-C9A951D2696B.jpeg"
                         alt="Photo"
-                        style="width:auto; height:80vh; max-width:100%; max-height:80vh; border-radius:16px; object-fit:contain; background:none; display:block; margin:0 auto;">
+                        style="width:auto; height:70vh; max-width:100%; max-height:70vh; border-radius:16px; object-fit:contain; background:none; display:block; margin:0 auto;">
                 </div>
-                <button id="collage-next" class="scroll-arrow" style="background:none; border:none; font-size:2.5em; cursor:pointer; position:static; margin-left:32px; z-index:2;">&#8594;</button>
             </div>
-            <div id="collage-thumbs" style="display:flex; gap:16px; margin-top:24px; flex-wrap:wrap; justify-content:center;">
-            <img src="../Images/Ty/01D0EBF3-56E9-46CF-BD83-C9A951D2696B.jpeg" alt="Photo 1" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
-            <img src="../Images/Ty/IMG_2809.jpeg" alt="Photo 2" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
-            <img src="../Images/Ty/IMG_2588.jpeg" alt="Photo 3" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
-            <img src="../Images/Ty/IMG_5124.jpeg" alt="Photo 4" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
-            <img src="../Images/Ty/IMG_4336.jpeg" alt="Photo 5" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
-            <img src="../Images/Ty/IMG_2817.jpeg" alt="Photo 6" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+            <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-top:18px;">
+                <button id="collage-prev" class="scroll-arrow" style="background:none; border:none; font-size:2.5em; cursor:pointer; margin-right:18px; z-index:2;">&#8592;</button>
+                <div id="collage-thumbs" style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
+                    <img src="../Images/Ty/01D0EBF3-56E9-46CF-BD83-C9A951D2696B.jpeg" alt="Photo 1" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+                    <img src="../Images/Ty/IMG_2809.jpeg" alt="Photo 2" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+                    <img src="../Images/Ty/IMG_2588.jpeg" alt="Photo 3" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+                    <img src="../Images/Ty/IMG_5124.jpeg" alt="Photo 4" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+                    <img src="../Images/Ty/IMG_4336.jpeg" alt="Photo 5" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+                    <img src="../Images/Ty/IMG_2817.jpeg" alt="Photo 6" style="width:80px; height:80px; object-fit:cover; border-radius:10px; cursor:pointer;">
+                </div>
+                <button id="collage-next" class="scroll-arrow" style="background:none; border:none; font-size:2.5em; cursor:pointer; margin-left:18px; z-index:2;">&#8594;</button>
             </div>
         </div>
     </div>
