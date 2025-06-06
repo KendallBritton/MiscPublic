@@ -719,6 +719,29 @@ body {
     }
 }
 
+@media (max-width: 700px) {
+    #collage-popup > div {
+        padding: 4vw !important;
+        border-radius: 10px !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+    }
+    #collage-slider img#collage-main-img {
+        max-width: 98vw !important;
+        max-height: 60vh !important;
+        border-radius: 8px !important;
+    }
+    #collage-thumbs img {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 6px !important;
+    }
+    #collage-prev, #collage-next {
+        font-size: 2em !important;
+        margin: 0 4px !important;
+    }
+}
+
 /* Hide WebKit scrollbars globally */
 *::-webkit-scrollbar {
     display: none; /* Hide the scrollbar */
