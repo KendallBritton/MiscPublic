@@ -743,15 +743,13 @@ body {
         font-size: 2em !important;
         margin: 0 4px !important;
     }
-    
+
     #close-collage-popup {
         top: 8px !important;
         right: 8px !important;
-        width: 56px !important;
-        height: 56px !important;
+        width: 32px !important;
+        height: 32px !important;
         font-size: 2.5em !important;
-        background: #fff !important;
-        color: #a0522d !important;
         z-index: 10001 !important;
     }
 }
