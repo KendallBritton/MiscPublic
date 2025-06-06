@@ -684,6 +684,10 @@ body {
         padding: 15px; /* Reduce padding for smaller screens */
         font-size: 0.9em; /* Adjust font size for better readability */
     }
+
+    .background-layer {
+        background-size: 200% 200%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -708,6 +712,10 @@ body {
     .parallax-item {
         padding: 10px; /* Further reduce padding for very small screens */
         font-size: 0.8em; /* Adjust font size for smaller devices */
+    }
+
+    .background-layer {
+        background-size: 200% 200%;
     }
 }
 
