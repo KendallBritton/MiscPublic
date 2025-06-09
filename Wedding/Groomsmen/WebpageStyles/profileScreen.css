@@ -116,8 +116,6 @@ body {
 }
 
 
-
-
 .container {
     position: absolute;
     width: calc(100% - 115px); /* Dynamically adjust width to fit within the screen */
@@ -680,6 +678,12 @@ body {
     .container3 .summary-and-qualifications .qualifications-list li {
         width: 100%;
     }
+
+    .container4 .summary {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
+    }
+
     .parallax-container {
         max-height: calc(100vh - 50px); /* Adjust height for smaller screens */
         padding: 5px; /* Reduce padding for smaller screens */
@@ -710,10 +714,17 @@ body {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
     }
+
     .container3 .summary-and-qualifications {
         padding: 10px; /* Further reduce padding for very small screens */
         font-size: 0.9em; /* Adjust font size for smaller devices */
     }
+
+    .container4 .summary {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
+    }
+
     .parallax-container {
         max-height: calc(100vh - 30px); /* Adjust height for very small screens */
         padding: 5px; /* Further reduce padding for very small screens */

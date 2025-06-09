@@ -106,7 +106,7 @@ function handleCheckboxClick(selectedValue) {
 // Function to handle the submit button
 function handleSubmit() {
 
-    alert('Form submitted!'); // Placeholder for form submission logic
+    alert('Thank you so much! \n\nThis is where the fun starts!! \n\nThe menu button is now unlocked so go check out whose in the rest of the party!'); // Placeholder for form submission logic
 
 }
 
