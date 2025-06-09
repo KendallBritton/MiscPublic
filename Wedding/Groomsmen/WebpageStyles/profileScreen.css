@@ -582,7 +582,7 @@ body {
 }
 
 .parallax-container {
-    min-height: 300px; /* Allow it to grow based on content */
+    min-height: 310px; /* Allow it to grow based on content */
     height: 100vh; /* Allow it to grow based on content */
     max-height: calc(100vh - 100px); /* Ensure it doesn't exceed the viewport height minus padding */
     width: 100%; /* Full width of the screen */
@@ -657,6 +657,11 @@ body {
         --parallax-item-gap: 20px; /* Smaller gap for very small screens */
     }
 
+    .container .summary {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
+    }
+
     .container2 .summary {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -694,6 +699,11 @@ body {
 
     :root {
         --parallax-item-gap: 20px; /* Smallest gap for very small screens */
+    }
+
+    .container .summary {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: .9em; /* Adjust font size for better readability */
     }
     
     .container2 .summary {
