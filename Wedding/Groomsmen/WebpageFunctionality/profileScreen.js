@@ -258,3 +258,26 @@ document.querySelectorAll('.sidebar a').forEach(link => {
 
     });
 });
+
+document.querySelectorAll('.parallax-item').forEach(item => {
+    const bg = item.querySelector('.bg-video');
+    const fg = item.querySelector('.fg-video');
+
+    if (bg && fg) {
+        // Sync play/pause
+        fg.addEventListener('play', () => { if (bg.paused) bg.play(); });
+        fg.addEventListener('pause', () => { if (!bg.paused) bg.pause(); });
+
+        // Sync seeking
+        fg.addEventListener('seeked', () => { bg.currentTime = fg.currentTime; });
+        fg.addEventListener('timeupdate', () => {
+            // Periodically sync to avoid drift
+            if (Math.abs(bg.currentTime - fg.currentTime) > 0.1) {
+                bg.currentTime = fg.currentTime;
+            }
+        });
+
+        // Optional: sync bg to fg on load
+        fg.addEventListener('loadedmetadata', () => { bg.currentTime = fg.currentTime; });
+    }
+});
