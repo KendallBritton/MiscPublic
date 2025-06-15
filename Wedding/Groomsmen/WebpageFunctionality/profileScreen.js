@@ -103,17 +103,31 @@ function handleCheckboxClick(selectedValue) {
 }
 
 
-// Function to handle the submit button
-function handleSubmit() {
-
-    alert('Thank you so much! \n\nThis is where the fun starts!! \n\nThe menu button is now unlocked so go check out whose in the rest of the party! \n\nSorry this took my so long. I made this all from scratch and I\'m a perfectionist.'); // Placeholder for form submission logic
-
-}
-
 // Response Submit Logic
 if (document.getElementById("submit-button")) {
 
     document.getElementById('submit-button').addEventListener('click', () => {
+
+        alert('Thank you so much! \n\nThis is where the fun starts!! \n\nThe menu button is now unlocked so go check out whose in the rest of the party! \n\nSorry this took my so long. I made this all from scratch and I\'m a perfectionist.'); // Placeholder for form submission logic
+
+
+        // Uncomment the following lines to enable email sending functionality
+
+        // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
+        //         subject: 'Update From Your Groomsmen Web Service',
+        //         message: localStorage.getItem("currentUserAccessName") + ' has chosen to be a groomsmen!',
+        // })
+        // .then(response => {
+        //     console.log("Email sent successfully!", response);
+
+        // })
+        // .catch(error => {
+        //     console.error("Failed to send email:", error);
+
+        //     // Show an error message (optional)
+        //     alert("There was an error submitting your response. Please try again.");
+        // });
+
 
         // Retrieve the existing map from localStorage
         let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
@@ -125,6 +139,7 @@ if (document.getElementById("submit-button")) {
         // Convert the updated Map to an array and save it to localStorage
         localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
 
+
         // Enable the sidebar
         document.querySelector('.sidebar').classList.remove('locked-sidebar');
         document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
@@ -133,40 +148,6 @@ if (document.getElementById("submit-button")) {
         document.getElementById("checkbox-section").remove();
         document.getElementById("submit-button").remove();
 
-        // Uncomment Below for full functionality
-
-        // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
-        //     subject: 'Update From Your Groomsmen Web Service',
-        //     message: userName + ' has chosen to be a groomsmen!',
-        // })
-        // .then(response => {
-        //     console.log("Email sent successfully!", response);
-
-        // // Retrieve the existing map from localStorage
-        // let savedMapArray = JSON.parse(localStorage.getItem("responseSubmissionMap")) || [];
-        // let responseSubmissionMap = new Map(savedMapArray);
-
-        // // Add the current user to the Map
-        // responseSubmissionMap.set(localStorage.getItem("currentUserAccessName"), "Response Submitted");
-
-        // // Convert the updated Map to an array and save it to localStorage
-        // localStorage.setItem("responseSubmissionMap", JSON.stringify(Array.from(responseSubmissionMap.entries())));
-
-        // // Unlocks the menu bar
-        // document.querySelector('.sidebar').classList.remove('locked-sidebar');
-        // document.querySelector('.sidebar-toggle').classList.remove('locked-sidebar');
-
-        //     // Remove the checkboxes and submit button
-        //     document.getElementById("checkboxContainer").remove();
-        //     document.getElementById("submitButton").remove();
-
-        // })
-        // .catch(error => {
-        //     console.error("Failed to send email:", error);
-
-        //     // Show an error message (optional)
-        //     alert("There was an error submitting your response. Please try again.");
-        // });
     });
 }
 
