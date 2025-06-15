@@ -659,10 +659,8 @@ body {
         font-size: 1.4em;
     }
 
-    .container2 h1 {
-        margin-top: 12px;
-        margin-bottom: 12px;
-        padding: 2px 4px;
+    .container2 {
+        padding: 60px;
     }
 
     .container .summary {
@@ -719,10 +717,8 @@ body {
         font-size: 1.4em;
     }
 
-    .container2 h1 {
-        margin-top: 12px;
-        margin-bottom: 12px;
-        padding: 2px 4px;
+    .container2 {
+        padding: 60px;
     }
 
     .container .summary {
