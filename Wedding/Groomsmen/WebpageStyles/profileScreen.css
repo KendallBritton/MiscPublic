@@ -655,6 +655,10 @@ body {
         --parallax-item-gap: 20px; /* Smaller gap for very small screens */
     }
 
+    .container, .container2, .container3, .container4 h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
     .container .summary {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -703,6 +707,10 @@ body {
 
     :root {
         --parallax-item-gap: 20px; /* Smallest gap for very small screens */
+    }
+
+    .container, .container2, .container3, .container4 h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
     }
 
     .container .summary {
