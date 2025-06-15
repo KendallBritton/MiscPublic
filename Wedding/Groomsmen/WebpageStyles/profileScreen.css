@@ -659,8 +659,8 @@ body {
         font-size: 1.4em;
     }
 
-    .container2 {
-        padding: 60px;
+    .container2-spacer {
+        height: 20px; /* Increase spacer height for smaller screens */
     }
 
     .container .summary {
@@ -717,8 +717,8 @@ body {
         font-size: 1.4em;
     }
 
-    .container2 {
-        padding: 60px;
+    .container2-spacer {
+        height: 20px; /* Increase spacer height for smaller screens */
     }
 
     .container .summary {
