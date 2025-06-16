@@ -198,8 +198,8 @@ body {
     z-index: 2; /* Ensure the container stays behind the image */
     display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center start;
+    justify-content: flex-start; /* Always start content at the top */
+    align-items: flex-start;
     overflow: auto;
 }
 
