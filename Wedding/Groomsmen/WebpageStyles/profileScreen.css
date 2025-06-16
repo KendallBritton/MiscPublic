@@ -660,15 +660,8 @@ body {
     }
 
     .container2 {
-        padding-top: 32px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .container2 h1 {
-        margin-top: 16px;
-        margin-bottom: 10px;
-        padding: 10px 14px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
     .container .summary {
@@ -726,15 +719,8 @@ body {
     }
 
     .container2 {
-        padding-top: 32px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .container2 h1 {
-        margin-top: 16px;
-        margin-bottom: 10px;
-        padding: 10px 14px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
     .container .summary {
