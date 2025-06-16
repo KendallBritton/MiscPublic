@@ -601,7 +601,7 @@ body {
     max-height: 300px; /* Ensure it doesn't exceed the viewport height minus padding */
     position: relative;
     padding: 20px; /* Reduce padding for smaller screens */
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(255, 255, 255, 0.15);
     margin-bottom: 20px;
     animation: parallaxEffect 60s infinite;
     width: 100%; /* Ensure it fits within the container */
