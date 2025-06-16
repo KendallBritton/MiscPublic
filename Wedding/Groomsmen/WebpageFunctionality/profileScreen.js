@@ -262,3 +262,17 @@ document.querySelectorAll('.parallax-item').forEach(item => {
         fg.addEventListener('loadedmetadata', () => { bg.currentTime = fg.currentTime; });
     }
 });
+
+function pauseOffscreenVideos() {
+    document.querySelectorAll('.container2 parallax-item').forEach(video => {
+        const rect = video.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) {
+            video.pause();
+        } else if (video.paused) {
+            video.play();
+        }
+    });
+}
+window.addEventListener('scroll', pauseOffscreenVideos);
+window.addEventListener('resize', pauseOffscreenVideos);
+document.addEventListener('DOMContentLoaded', pauseOffscreenVideos);
