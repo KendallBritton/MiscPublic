@@ -601,7 +601,7 @@ body {
     max-height: 300px; /* Ensure it doesn't exceed the viewport height minus padding */
     position: relative;
     padding: 20px; /* Reduce padding for smaller screens */
-    background-color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.35);
     margin-bottom: 20px;
     animation: parallaxEffect 60s infinite;
     width: 100%; /* Ensure it fits within the container */
@@ -660,7 +660,7 @@ body {
     }
 
     .parallax-item .bg-video {
-        filter:blur(1px) brightness(1);z-index:0 !important;
+        display: none !important;
     }
 
     .container2 {
@@ -723,7 +723,7 @@ body {
     }
 
     .parallax-item .bg-video {
-        filter:blur(1px) brightness(1);z-index:0 !important;
+        display: none !important;
     }
 
     .container2 {
