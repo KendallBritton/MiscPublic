@@ -659,6 +659,10 @@ body {
         font-size: 1.4em;
     }
 
+    .parallax-item .bg-video {
+        filter:blur(1px) brightness(1);z-index:0 !important;
+    }
+
     .container2 {
         justify-content: flex-start; /* Always start content at the top */
         align-items: flex-start;
@@ -716,6 +720,10 @@ body {
 
     h1 {
         font-size: 1.4em;
+    }
+
+    .parallax-item .bg-video {
+        filter:blur(1px) brightness(1);z-index:0 !important;
     }
 
     .container2 {
