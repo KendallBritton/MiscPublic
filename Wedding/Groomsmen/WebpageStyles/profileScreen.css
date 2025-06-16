@@ -198,8 +198,8 @@ body {
     z-index: 2; /* Ensure the container stays behind the image */
     display: none;
     flex-direction: column;
-    justify-content: flex-start; /* Always start content at the top */
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
 }
 
@@ -659,6 +659,11 @@ body {
         font-size: 1.4em;
     }
 
+    .container2 {
+        justify-content: flex-start; /* Always start content at the top */
+        align-items: flex-start;
+    }
+
     .container .summary {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -711,6 +716,11 @@ body {
 
     h1 {
         font-size: 1.4em;
+    }
+
+    .container2 {
+        justify-content: flex-start; /* Always start content at the top */
+        align-items: flex-start;
     }
 
     .container .summary {
