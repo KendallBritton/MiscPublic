@@ -199,7 +199,7 @@ body {
     display: none;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center start;
     overflow: auto;
 }
 
@@ -659,11 +659,6 @@ body {
         font-size: 1.4em;
     }
 
-    .container2 {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-
     .container .summary {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: .9em; /* Adjust font size for better readability */
@@ -716,11 +711,6 @@ body {
 
     h1 {
         font-size: 1.4em;
-    }
-
-    .container2 {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
     }
 
     .container .summary {
