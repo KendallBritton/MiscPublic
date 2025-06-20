@@ -113,20 +113,20 @@ if (document.getElementById("submit-button")) {
 
         // Uncomment the following lines to enable email sending functionality
 
-        // emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
-        //         subject: 'Update From Your Groomsmen Web Service',
-        //         message: localStorage.getItem("currentUserAccessName") + ' has chosen to be a groomsmen!',
-        // })
-        // .then(response => {
-        //     console.log("Email sent successfully!", response);
+        emailjs.send('service_9d5sj9h', 'template_hx7gpm7', {
+                subject: 'Update From Your Groomsmen Web Service',
+                message: localStorage.getItem("currentUserAccessName") + ' has chosen to be a groomsmen!',
+        })
+        .then(response => {
+            console.log("Email sent successfully!", response);
 
-        // })
-        // .catch(error => {
-        //     console.error("Failed to send email:", error);
+        })
+        .catch(error => {
+            console.error("Failed to send email:", error);
 
-        //     // Show an error message (optional)
-        //     alert("There was an error submitting your response. Please try again.");
-        // });
+            // Show an error message (optional)
+            alert("There was an error submitting your response. Please try again.");
+        });
 
 
         // Retrieve the existing map from localStorage
